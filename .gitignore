@@ -1,0 +1,29 @@
+# Dependencies
+**/node_modules
+.yarn/
+.pnp.*
+
+# Build & TypeScript Output
+dist/
+**/lib
+*.tsbuildinfo
+
+# Logs & Coverage
+*.log
+npm-debug.log*
+coverage/
+.nyc_output
+
+# Environment
+.env*
+!.env.example
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+
+# Framework Specific (Next/Nuxt/Gatsby)
+.next/
+.nuxt/
+.cache/
