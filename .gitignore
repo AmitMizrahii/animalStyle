@@ -4,7 +4,7 @@
 .pnp.*
 
 # Build & TypeScript Output
-**/dist
+dist/
 **/lib
 *.tsbuildinfo
 
