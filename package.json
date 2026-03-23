@@ -13,6 +13,8 @@
     "start:backend": "npm start -w packages/backend",
     "start:frontend": "npm run preview -w packages/frontend",
     "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "npm run build -w packages/backend",
+    "build:frontend": "npm run build -w packages/frontend",
     "test:backend": "npm test -w packages/backend",
     "test:frontend": "npm test -w packages/frontend",
     "test": "npm run test:backend && npm run test:frontend",
