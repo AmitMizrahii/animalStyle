@@ -15,6 +15,7 @@ const userSchema = new Schema<IUserDocument>(
       type: String,
       required: [true, "Email is required"],
       lowercase: true,
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, "Invalid email"],
     },
     password: {
       type: String,
