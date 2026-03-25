@@ -25,3 +25,28 @@ export interface TokenPayload {
   exp?: number;
   jti: string;
 }
+export interface IAnimalPost {
+  _id?: string;
+  name: string;
+  type: "dog" | "cat" | "other";
+  age: number;
+  gender: "male" | "female";
+  description: string;
+  location: string;
+  imagePaths: string[];
+  createdBy: string;
+  likes: string[];
+  commentsCount: number;
+  createdAt?: Date;
+  size: "small" | "medium" | "large";
+  vaccinated: boolean;
+  neutered: boolean;
+  goodWithKids: boolean;
+  goodWithOtherAnimals: boolean;
+  adoptionStatus: "available" | "pending" | "adopted";
+}
+
+export type PostWithAuthor = Omit<IAnimalPost, "createdBy"> & {
+  _id: string;
+  createdBy: IUser;
+};
