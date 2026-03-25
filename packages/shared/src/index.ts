@@ -9,3 +9,9 @@ export interface UserWithToken extends User {
   token: string;
   refreshToken: string;
 }
+
+export interface ApiError {
+  message: string;
+  code: string;
+  statusCode: number;
+}
