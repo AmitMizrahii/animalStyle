@@ -17,4 +17,11 @@ export interface IUserRepository {
   findByIdWithRefreshToken(id: string): Promise<IUser | null>;
 
   create(data: CreateUserData): Promise<IUser>;
+
+  updateRefreshToken(id: string, token: string | undefined): Promise<void>;
+
+  isUsernameTakenByOther(
+    username: string,
+    excludeUserId: string,
+  ): Promise<boolean>;
 }

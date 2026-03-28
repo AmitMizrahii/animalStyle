@@ -1,4 +1,4 @@
-export type { User, UserWithToken } from "shared";
+export type { User, UserWithToken, ApiError } from "shared";
 
 export interface IUser {
   _id?: string;
@@ -10,6 +10,21 @@ export interface IUser {
   createdAt?: Date;
 }
 
+export interface IUserResponse extends Omit<
+  IUser,
+  "password" | "refreshToken"
+> {
+  token: string;
+  refreshToken: string;
+}
+
+export interface TokenPayload {
+  userId: string;
+  email: string;
+  iat?: number;
+  exp?: number;
+  jti: string;
+}
 export interface IAnimalPost {
   _id?: string;
   name: string;

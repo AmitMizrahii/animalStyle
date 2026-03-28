@@ -43,4 +43,19 @@ export class UserMongoRepository implements IUserRepository {
     await doc.save();
     return toUser(doc);
   }
+
+  async updateRefreshToken(
+    id: string,
+    token: string | undefined,
+  ): Promise<void> {
+    await User.findByIdAndUpdate(id, { refreshToken: token ?? null });
+  }
+
+  async isUsernameTakenByOther(
+    username: string,
+    excludeUserId: string,
+  ): Promise<boolean> {
+    const doc = await User.findOne({ username, _id: { $ne: excludeUserId } });
+    return doc !== null;
+  }
 }
