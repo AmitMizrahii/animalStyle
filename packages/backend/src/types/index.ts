@@ -50,3 +50,16 @@ export type PostWithAuthor = Omit<IAnimalPost, "createdBy"> & {
   _id: string;
   createdBy: IUser;
 };
+
+export interface IComment {
+  _id?: string;
+  postId: string;
+  userId: string;
+  content: string;
+  createdAt?: Date;
+}
+
+export type CommentWithUser = Omit<IComment, "userId"> & {
+  _id: string;
+  userId: IUser;
+};
