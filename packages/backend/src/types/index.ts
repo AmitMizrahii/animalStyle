@@ -1,4 +1,4 @@
-export type { User, UserWithToken, ApiError } from "shared";
+export type * from "shared";
 
 export interface IUser {
   _id?: string;
@@ -49,4 +49,17 @@ export interface IAnimalPost {
 export type PostWithAuthor = Omit<IAnimalPost, "createdBy"> & {
   _id: string;
   createdBy: IUser;
+};
+
+export interface IComment {
+  _id?: string;
+  postId: string;
+  userId: string;
+  content: string;
+  createdAt?: Date;
+}
+
+export type CommentWithUser = Omit<IComment, "userId"> & {
+  _id: string;
+  userId: IUser;
 };

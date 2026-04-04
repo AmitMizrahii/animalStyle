@@ -9,7 +9,7 @@ dist/
 *.tsbuildinfo
 
 # Logs & Coverage
-*.log
+*.logs
 npm-debug.log*
 coverage/
 .nyc_output

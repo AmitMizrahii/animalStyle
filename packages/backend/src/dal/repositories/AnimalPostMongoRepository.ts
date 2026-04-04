@@ -8,6 +8,7 @@ import {
   PostQueryOptions,
   PostSearchFilters,
 } from "../interfaces/IAnimalPostRepository";
+import { ICommentRepository } from "../interfaces/ICommentRepository";
 
 type PopulatedPostDoc = {
   _id: { toString(): string };
@@ -65,7 +66,7 @@ function toPostWithAuthor(
 }
 
 export class AnimalPostMongoRepository implements IAnimalPostRepository {
-  constructor() {}
+  constructor(private readonly commentRepo: ICommentRepository) {}
 
   async create(data: CreatePostData): Promise<PostWithAuthor> {
     const doc = new AnimalPost({ ...data, likes: [] });
@@ -89,22 +90,30 @@ export class AnimalPostMongoRepository implements IAnimalPostRepository {
       AnimalPost.countDocuments(),
     ]);
 
-    //TODO: count comments for each post
+    const countMap = await this.commentRepo.countByPostIds(
+      docs.map((d) => d._id.toString()),
+    );
 
     return {
-      posts: docs.map((doc) => toPostWithAuthor(doc, 0)),
+      posts: docs.map((doc) =>
+        toPostWithAuthor(doc, countMap.get(doc._id.toString()) ?? 0),
+      ),
       total,
     };
   }
 
   async findById(id: string): Promise<PostWithAuthor | null> {
-    const doc: PopulatedPostDoc | null = await AnimalPost.findById(
-      id,
-    ).populate<{ createdBy: IUserDocument }>("createdBy");
+    const [doc, commentsCount]: [PopulatedPostDoc | null, number] =
+      await Promise.all([
+        AnimalPost.findById(id).populate<{ createdBy: IUserDocument }>(
+          "createdBy",
+        ),
+        this.commentRepo.countByPostId(id),
+      ]);
 
     if (!doc) return null;
 
-    return toPostWithAuthor(doc, 0); // TODO: count comments for the post
+    return toPostWithAuthor(doc, commentsCount);
   }
 
   async findByUserId(
@@ -122,9 +131,14 @@ export class AnimalPostMongoRepository implements IAnimalPostRepository {
       AnimalPost.countDocuments(filter),
     ]);
 
-    //TODO: count comments for each post
+    const countMap = await this.commentRepo.countByPostIds(
+      docs.map((d) => d._id.toString()),
+    );
+
     return {
-      posts: docs.map((doc) => toPostWithAuthor(doc, 0)),
+      posts: docs.map((doc) =>
+        toPostWithAuthor(doc, countMap.get(doc._id.toString()) ?? 0),
+      ),
       total,
     };
   }
@@ -153,11 +167,12 @@ export class AnimalPostMongoRepository implements IAnimalPostRepository {
       doc.adoptionStatus = data.adoptionStatus;
 
     await doc.save();
-    const populated: PopulatedPostDoc = await doc.populate<{
-      createdBy: IUserDocument;
-    }>("createdBy");
-
-    return toPostWithAuthor(populated, 0); // TODO: count comments for the post
+    const [populated, commentsCount]: [PopulatedPostDoc, number] =
+      await Promise.all([
+        doc.populate<{ createdBy: IUserDocument }>("createdBy"),
+        this.commentRepo.countByPostId(id),
+      ]);
+    return toPostWithAuthor(populated, commentsCount);
   }
 
   async delete(id: string): Promise<void> {
@@ -199,11 +214,13 @@ export class AnimalPostMongoRepository implements IAnimalPostRepository {
       AnimalPost.countDocuments(filter),
     ]);
 
-    //TODO: count comments for each post
+    const countMap = await this.commentRepo.countByPostIds(
+      docs.map((d) => d._id.toString()),
+    );
 
     return {
-      posts: docs.map(
-        (doc) => toPostWithAuthor(doc, 0), // TODO: count comments for each post
+      posts: docs.map((doc) =>
+        toPostWithAuthor(doc, countMap.get(doc._id.toString()) ?? 0),
       ),
       total,
     };
@@ -248,11 +265,13 @@ export class AnimalPostMongoRepository implements IAnimalPostRepository {
       AnimalPost.countDocuments(mongoQuery),
     ]);
 
-    //TODO: count comments for each post
+    const countMap = await this.commentRepo.countByPostIds(
+      docs.map((d) => d._id.toString()),
+    );
 
     return {
-      posts: docs.map(
-        (doc) => toPostWithAuthor(doc, 0), // TODO: count comments for each post
+      posts: docs.map((doc) =>
+        toPostWithAuthor(doc, countMap.get(doc._id.toString()) ?? 0),
       ),
       total,
     };
