@@ -1,3 +1,5 @@
+export * from "./post-api";
+
 export interface User {
   _id: string;
   username: string;

@@ -1,10 +1,12 @@
 import dotenv from "dotenv";
 import express, { Express } from "express";
 import mongoose from "mongoose";
-import { userRepository } from "./container";
+import { commentRepository, postRepository, userRepository } from "./container";
 import { errorHandler } from "./middleware/errorMiddleware";
 import requestLogger from "./middleware/requestLogger";
 import { createAuthRoutes } from "./routes/authRoutes";
+import { createCommentRoutes } from "./routes/commentRoutes";
+import { createPostRoutes } from "./routes/postRoutes";
 import logger from "./utils/logger";
 
 dotenv.config({ path: ".env.dev" });
@@ -36,6 +38,11 @@ const initializeApp = (): Promise<Express> => {
     });
 
     app.use("/auth", createAuthRoutes(userRepository));
+    app.use("/posts", createPostRoutes(postRepository, commentRepository));
+    app.use(
+      "/comments",
+      createCommentRoutes(commentRepository, postRepository),
+    );
 
     app.get("/health", (_req, res) => {
       res.json({ status: "ok", timestamp: new Date().toISOString() });

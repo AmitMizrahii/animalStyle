@@ -1,4 +1,4 @@
-export type * from "shared";
+export * from "shared";
 
 export interface IUser {
   _id?: string;

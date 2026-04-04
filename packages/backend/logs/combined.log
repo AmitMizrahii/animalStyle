@@ -1,0 +1,718 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:06.642Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 167.611 ms","timestamp":"2026-04-04T21:05:06.896Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:06.908Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 65.693 ms","timestamp":"2026-04-04T21:05:06.981Z"}
+{"level":"http","message":"POST /auth/register 409 165 bytes - 3.551 ms","timestamp":"2026-04-04T21:05:06.989Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:06.994Z"}
+{"level":"http","message":"POST /auth/register 400 121 bytes - 0.477 ms","timestamp":"2026-04-04T21:05:07.000Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.003Z"}
+{"level":"http","message":"POST /auth/register 400 113 bytes - 1.203 ms","timestamp":"2026-04-04T21:05:07.010Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.013Z"}
+{"level":"http","message":"POST /auth/register 400 157 bytes - 0.909 ms","timestamp":"2026-04-04T21:05:07.020Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.023Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 69.650 ms","timestamp":"2026-04-04T21:05:07.098Z"}
+{"level":"http","message":"POST /auth/login 200 590 bytes - 64.310 ms","timestamp":"2026-04-04T21:05:07.170Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.174Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 86.218 ms","timestamp":"2026-04-04T21:05:07.269Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 81.675 ms","timestamp":"2026-04-04T21:05:07.357Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.364Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 74.580 ms","timestamp":"2026-04-04T21:05:07.448Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 3.520 ms","timestamp":"2026-04-04T21:05:07.457Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.461Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 76.932 ms","timestamp":"2026-04-04T21:05:07.544Z"}
+{"level":"http","message":"POST /auth/login 400 135 bytes - 0.796 ms","timestamp":"2026-04-04T21:05:07.551Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.555Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 79.407 ms","timestamp":"2026-04-04T21:05:07.641Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 8.315 ms","timestamp":"2026-04-04T21:05:07.656Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.666Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 84.578 ms","timestamp":"2026-04-04T21:05:07.761Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 1.143 ms","timestamp":"2026-04-04T21:05:07.768Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.771Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 71.706 ms","timestamp":"2026-04-04T21:05:07.849Z"}
+{"level":"http","message":"POST /auth/refresh 400 126 bytes - 0.626 ms","timestamp":"2026-04-04T21:05:07.854Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.857Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.307 ms","timestamp":"2026-04-04T21:05:07.929Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 6.497 ms","timestamp":"2026-04-04T21:05:07.940Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 6.608 ms","timestamp":"2026-04-04T21:05:07.951Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 6.349 ms","timestamp":"2026-04-04T21:05:07.962Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:07.964Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.052 ms","timestamp":"2026-04-04T21:05:08.033Z"}
+{"level":"http","message":"POST /auth/logout 200 61 bytes - 3.043 ms","timestamp":"2026-04-04T21:05:08.040Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:08.045Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.719 ms","timestamp":"2026-04-04T21:05:08.107Z"}
+{"level":"http","message":"POST /auth/logout 401 77 bytes - 0.300 ms","timestamp":"2026-04-04T21:05:08.111Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:09.387Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.860 ms","timestamp":"2026-04-04T21:05:09.490Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 85.927 ms","timestamp":"2026-04-04T21:05:09.581Z"}
+{"level":"http","message":"POST /comments/69d17d05e5a9e666b7206cd7 201 257 bytes - 63.121 ms","timestamp":"2026-04-04T21:05:09.647Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:09.652Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.472 ms","timestamp":"2026-04-04T21:05:09.719Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.723 ms","timestamp":"2026-04-04T21:05:09.730Z"}
+{"level":"http","message":"POST /comments/69d17d05e5a9e666b7206ce8 401 77 bytes - 0.466 ms","timestamp":"2026-04-04T21:05:09.733Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:09.737Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.406 ms","timestamp":"2026-04-04T21:05:09.807Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.579 ms","timestamp":"2026-04-04T21:05:09.819Z"}
+{"level":"http","message":"POST /comments/69d17d05e5a9e666b7206cf3 400 119 bytes - 0.502 ms","timestamp":"2026-04-04T21:05:09.824Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:09.826Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.240 ms","timestamp":"2026-04-04T21:05:09.899Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.139 ms","timestamp":"2026-04-04T21:05:09.909Z"}
+{"level":"http","message":"POST /comments/69d17d05e5a9e666b7206cfd 400 127 bytes - 0.594 ms","timestamp":"2026-04-04T21:05:09.914Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:09.916Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.455 ms","timestamp":"2026-04-04T21:05:10.002Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.521 ms","timestamp":"2026-04-04T21:05:10.012Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d07 201 250 bytes - 19.626 ms","timestamp":"2026-04-04T21:05:10.034Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d07 201 250 bytes - 9.143 ms","timestamp":"2026-04-04T21:05:10.046Z"}
+{"level":"http","message":"GET /comments/69d17d06e5a9e666b7206d07 200 534 bytes - 20.440 ms","timestamp":"2026-04-04T21:05:10.069Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:10.072Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 70.661 ms","timestamp":"2026-04-04T21:05:10.153Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 9.183 ms","timestamp":"2026-04-04T21:05:10.166Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d23 201 250 bytes - 13.254 ms","timestamp":"2026-04-04T21:05:10.182Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d23 201 250 bytes - 12.681 ms","timestamp":"2026-04-04T21:05:10.200Z"}
+{"level":"http","message":"GET /comments/69d17d06e5a9e666b7206d23?page=1&limit=1 200 305 bytes - 12.241 ms","timestamp":"2026-04-04T21:05:10.216Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:10.219Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 69.004 ms","timestamp":"2026-04-04T21:05:10.297Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.860 ms","timestamp":"2026-04-04T21:05:10.310Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d3f 201 250 bytes - 13.848 ms","timestamp":"2026-04-04T21:05:10.331Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d3f 201 250 bytes - 11.968 ms","timestamp":"2026-04-04T21:05:10.346Z"}
+{"level":"http","message":"GET /comments/69d17d06e5a9e666b7206d3f 200 534 bytes - 11.534 ms","timestamp":"2026-04-04T21:05:10.361Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:10.364Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 65.389 ms","timestamp":"2026-04-04T21:05:10.437Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.125 ms","timestamp":"2026-04-04T21:05:10.445Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d5b 201 252 bytes - 8.830 ms","timestamp":"2026-04-04T21:05:10.457Z"}
+{"level":"http","message":"DELETE /comments/69d17d06e5a9e666b7206d61 200 66 bytes - 4.273 ms","timestamp":"2026-04-04T21:05:10.464Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:10.468Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.929 ms","timestamp":"2026-04-04T21:05:10.533Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.146 ms","timestamp":"2026-04-04T21:05:10.542Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d6e 201 252 bytes - 8.230 ms","timestamp":"2026-04-04T21:05:10.553Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 69.337 ms","timestamp":"2026-04-04T21:05:10.625Z"}
+{"level":"http","message":"DELETE /comments/69d17d06e5a9e666b7206d74 403 146 bytes - 2.775 ms","timestamp":"2026-04-04T21:05:10.631Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:05:10.634Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.270 ms","timestamp":"2026-04-04T21:05:10.699Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.773 ms","timestamp":"2026-04-04T21:05:10.706Z"}
+{"level":"http","message":"POST /comments/69d17d06e5a9e666b7206d84 201 252 bytes - 8.808 ms","timestamp":"2026-04-04T21:05:10.718Z"}
+{"level":"http","message":"DELETE /comments/69d17d06e5a9e666b7206d8a 401 77 bytes - 0.245 ms","timestamp":"2026-04-04T21:05:10.721Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.330Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 85.633 ms","timestamp":"2026-04-04T21:06:19.477Z"}
+{"level":"http","message":"POST /posts 201 516 bytes - 20.512 ms","timestamp":"2026-04-04T21:06:19.507Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.514Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.522 ms","timestamp":"2026-04-04T21:06:19.593Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.956 ms","timestamp":"2026-04-04T21:06:19.604Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.607Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.470 ms","timestamp":"2026-04-04T21:06:19.676Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.059 ms","timestamp":"2026-04-04T21:06:19.687Z"}
+{"level":"http","message":"PUT /posts/69d17d4bc066f7726f6f1103 200 517 bytes - 19.866 ms","timestamp":"2026-04-04T21:06:19.710Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.713Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.980 ms","timestamp":"2026-04-04T21:06:19.778Z"}
+{"level":"http","message":"POST /posts 400 197 bytes - 1.618 ms","timestamp":"2026-04-04T21:06:19.785Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.788Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.077 ms","timestamp":"2026-04-04T21:06:19.857Z"}
+{"level":"http","message":"POST /posts 400 211 bytes - 0.678 ms","timestamp":"2026-04-04T21:06:19.861Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.864Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 106.027 ms","timestamp":"2026-04-04T21:06:19.983Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.743 ms","timestamp":"2026-04-04T21:06:19.993Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:19.999Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.006 ms","timestamp":"2026-04-04T21:06:20.068Z"}
+{"level":"http","message":"POST /posts 201 564 bytes - 5.317 ms","timestamp":"2026-04-04T21:06:20.077Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.082Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.296 ms","timestamp":"2026-04-04T21:06:20.146Z"}
+{"level":"http","message":"POST /posts 401 77 bytes - 0.434 ms","timestamp":"2026-04-04T21:06:20.150Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.153Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.594 ms","timestamp":"2026-04-04T21:06:20.219Z"}
+{"level":"http","message":"POST /posts 400 187 bytes - 0.734 ms","timestamp":"2026-04-04T21:06:20.223Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.228Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.180 ms","timestamp":"2026-04-04T21:06:20.299Z"}
+{"level":"http","message":"POST /posts 400 577 bytes - 0.792 ms","timestamp":"2026-04-04T21:06:20.303Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.306Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.877 ms","timestamp":"2026-04-04T21:06:20.370Z"}
+{"level":"http","message":"POST /posts 400 133 bytes - 0.651 ms","timestamp":"2026-04-04T21:06:20.374Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.376Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.115 ms","timestamp":"2026-04-04T21:06:20.443Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 8.834 ms","timestamp":"2026-04-04T21:06:20.456Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.910 ms","timestamp":"2026-04-04T21:06:20.465Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 7.140 ms","timestamp":"2026-04-04T21:06:20.477Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.346 ms","timestamp":"2026-04-04T21:06:20.486Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.176 ms","timestamp":"2026-04-04T21:06:20.494Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.025 ms","timestamp":"2026-04-04T21:06:20.503Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.317 ms","timestamp":"2026-04-04T21:06:20.511Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.358 ms","timestamp":"2026-04-04T21:06:20.519Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 7.951 ms","timestamp":"2026-04-04T21:06:20.530Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.598 ms","timestamp":"2026-04-04T21:06:20.538Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.880 ms","timestamp":"2026-04-04T21:06:20.546Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.336 ms","timestamp":"2026-04-04T21:06:20.554Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.135 ms","timestamp":"2026-04-04T21:06:20.562Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.285 ms","timestamp":"2026-04-04T21:06:20.570Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.442 ms","timestamp":"2026-04-04T21:06:20.577Z"}
+{"level":"http","message":"GET /posts?page=1&limit=10 200 4920 bytes - 14.202 ms","timestamp":"2026-04-04T21:06:20.595Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.599Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 56.984 ms","timestamp":"2026-04-04T21:06:20.664Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.846 ms","timestamp":"2026-04-04T21:06:20.673Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.783 ms","timestamp":"2026-04-04T21:06:20.681Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.662 ms","timestamp":"2026-04-04T21:06:20.693Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.149 ms","timestamp":"2026-04-04T21:06:20.701Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.298 ms","timestamp":"2026-04-04T21:06:20.709Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.038 ms","timestamp":"2026-04-04T21:06:20.717Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 4.500 ms","timestamp":"2026-04-04T21:06:20.724Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.178 ms","timestamp":"2026-04-04T21:06:20.732Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 4.689 ms","timestamp":"2026-04-04T21:06:20.740Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.449 ms","timestamp":"2026-04-04T21:06:20.747Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.631 ms","timestamp":"2026-04-04T21:06:20.754Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.282 ms","timestamp":"2026-04-04T21:06:20.762Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.762 ms","timestamp":"2026-04-04T21:06:20.769Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 4.658 ms","timestamp":"2026-04-04T21:06:20.776Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 4.775 ms","timestamp":"2026-04-04T21:06:20.784Z"}
+{"level":"http","message":"GET /posts?page=1&limit=5 200 2503 bytes - 9.687 ms","timestamp":"2026-04-04T21:06:20.796Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.799Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.025 ms","timestamp":"2026-04-04T21:06:20.870Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.162 ms","timestamp":"2026-04-04T21:06:20.878Z"}
+{"level":"http","message":"GET /posts/69d17d4cc066f7726f6f11c5 200 519 bytes - 5.673 ms","timestamp":"2026-04-04T21:06:20.886Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.888Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.345 ms","timestamp":"2026-04-04T21:06:20.954Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.508 ms","timestamp":"2026-04-04T21:06:20.964Z"}
+{"level":"http","message":"GET /posts/invalid-id 500 280 bytes - 1.610 ms","timestamp":"2026-04-04T21:06:20.969Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:20.971Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.192 ms","timestamp":"2026-04-04T21:06:21.045Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.296 ms","timestamp":"2026-04-04T21:06:21.055Z"}
+{"level":"http","message":"PUT /posts/69d17d4dc066f7726f6f11dc 200 527 bytes - 13.444 ms","timestamp":"2026-04-04T21:06:21.072Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.078Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.959 ms","timestamp":"2026-04-04T21:06:21.142Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.605 ms","timestamp":"2026-04-04T21:06:21.155Z"}
+{"level":"http","message":"PUT /posts/69d17d4dc066f7726f6f11ee 200 538 bytes - 13.636 ms","timestamp":"2026-04-04T21:06:21.171Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.175Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.366 ms","timestamp":"2026-04-04T21:06:21.240Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.084 ms","timestamp":"2026-04-04T21:06:21.249Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 58.166 ms","timestamp":"2026-04-04T21:06:21.311Z"}
+{"level":"http","message":"PUT /posts/69d17d4dc066f7726f6f1200 403 136 bytes - 5.691 ms","timestamp":"2026-04-04T21:06:21.319Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.321Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.710 ms","timestamp":"2026-04-04T21:06:21.387Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.939 ms","timestamp":"2026-04-04T21:06:21.395Z"}
+{"level":"http","message":"DELETE /posts/69d17d4dc066f7726f6f1211 200 63 bytes - 9.917 ms","timestamp":"2026-04-04T21:06:21.407Z"}
+{"level":"http","message":"GET /posts/69d17d4dc066f7726f6f1211 404 102 bytes - 2.573 ms","timestamp":"2026-04-04T21:06:21.413Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.415Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.530 ms","timestamp":"2026-04-04T21:06:21.479Z"}
+{"level":"http","message":"POST /auth/register 201 576 bytes - 55.554 ms","timestamp":"2026-04-04T21:06:21.542Z"}
+{"level":"http","message":"POST /auth/register 201 576 bytes - 54.726 ms","timestamp":"2026-04-04T21:06:21.600Z"}
+{"level":"http","message":"POST /posts 201 492 bytes - 5.366 ms","timestamp":"2026-04-04T21:06:21.608Z"}
+{"level":"http","message":"GET /posts/user/69d17d4dc066f7726f6f1223 200 549 bytes - 18.538 ms","timestamp":"2026-04-04T21:06:21.629Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.631Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.653 ms","timestamp":"2026-04-04T21:06:21.695Z"}
+{"level":"http","message":"POST /auth/register 201 595 bytes - 56.627 ms","timestamp":"2026-04-04T21:06:21.754Z"}
+{"level":"http","message":"GET /posts/user/69d17d4dc066f7726f6f1239 200 81 bytes - 4.416 ms","timestamp":"2026-04-04T21:06:21.762Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.764Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 56.612 ms","timestamp":"2026-04-04T21:06:21.827Z"}
+{"level":"http","message":"GET /posts/user/69d17d4dc066f7726f6f1246 401 77 bytes - 0.292 ms","timestamp":"2026-04-04T21:06:21.830Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.833Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.753 ms","timestamp":"2026-04-04T21:06:21.899Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.696 ms","timestamp":"2026-04-04T21:06:21.909Z"}
+{"level":"http","message":"GET /posts/69d17d4dc066f7726f6f124e 200 519 bytes - 5.058 ms","timestamp":"2026-04-04T21:06:21.917Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:21.920Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.976 ms","timestamp":"2026-04-04T21:06:21.987Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.826 ms","timestamp":"2026-04-04T21:06:21.995Z"}
+{"level":"http","message":"POST /comments/69d17d4dc066f7726f6f125b 201 252 bytes - 13.194 ms","timestamp":"2026-04-04T21:06:22.011Z"}
+{"level":"http","message":"POST /comments/69d17d4dc066f7726f6f125b 201 253 bytes - 10.088 ms","timestamp":"2026-04-04T21:06:22.024Z"}
+{"level":"http","message":"GET /posts/69d17d4dc066f7726f6f125b 200 519 bytes - 4.484 ms","timestamp":"2026-04-04T21:06:22.031Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.033Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.600 ms","timestamp":"2026-04-04T21:06:22.098Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.859 ms","timestamp":"2026-04-04T21:06:22.108Z"}
+{"level":"http","message":"POST /comments/69d17d4ec066f7726f6f1274 201 252 bytes - 9.076 ms","timestamp":"2026-04-04T21:06:22.120Z"}
+{"level":"http","message":"POST /comments/69d17d4ec066f7726f6f1274 201 253 bytes - 8.458 ms","timestamp":"2026-04-04T21:06:22.131Z"}
+{"level":"http","message":"DELETE /comments/69d17d4ec066f7726f6f1280 200 66 bytes - 3.961 ms","timestamp":"2026-04-04T21:06:22.138Z"}
+{"level":"http","message":"GET /posts/69d17d4ec066f7726f6f1274 200 519 bytes - 5.119 ms","timestamp":"2026-04-04T21:06:22.146Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.148Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.744 ms","timestamp":"2026-04-04T21:06:22.215Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.193 ms","timestamp":"2026-04-04T21:06:22.223Z"}
+{"level":"http","message":"POST /posts 201 514 bytes - 4.899 ms","timestamp":"2026-04-04T21:06:22.231Z"}
+{"level":"http","message":"POST /comments/69d17d4ec066f7726f6f128f 201 260 bytes - 9.308 ms","timestamp":"2026-04-04T21:06:22.244Z"}
+{"level":"http","message":"GET /posts?page=1&limit=10 200 1067 bytes - 17.567 ms","timestamp":"2026-04-04T21:06:22.265Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.267Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.794 ms","timestamp":"2026-04-04T21:06:22.332Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.725 ms","timestamp":"2026-04-04T21:06:22.342Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12a6/like 200 55 bytes - 12.023 ms","timestamp":"2026-04-04T21:06:22.357Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.359Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.256 ms","timestamp":"2026-04-04T21:06:22.428Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 9.551 ms","timestamp":"2026-04-04T21:06:22.442Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12b5/like 200 55 bytes - 16.778 ms","timestamp":"2026-04-04T21:06:22.465Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12b5/like 200 56 bytes - 20.051 ms","timestamp":"2026-04-04T21:06:22.490Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.493Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.574 ms","timestamp":"2026-04-04T21:06:22.565Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.627 ms","timestamp":"2026-04-04T21:06:22.574Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 54.831 ms","timestamp":"2026-04-04T21:06:22.632Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12c9/like 200 55 bytes - 8.425 ms","timestamp":"2026-04-04T21:06:22.643Z"}
+{"level":"http","message":"GET /posts/liked/69d17d4ec066f7726f6f12cd 200 591 bytes - 6.622 ms","timestamp":"2026-04-04T21:06:22.653Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.655Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.740 ms","timestamp":"2026-04-04T21:06:22.719Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.091 ms","timestamp":"2026-04-04T21:06:22.728Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 55.206 ms","timestamp":"2026-04-04T21:06:22.786Z"}
+{"level":"http","message":"GET /posts/liked/69d17d4ec066f7726f6f12e4 200 81 bytes - 4.111 ms","timestamp":"2026-04-04T21:06:22.793Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.795Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.076 ms","timestamp":"2026-04-04T21:06:22.859Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 4.998 ms","timestamp":"2026-04-04T21:06:22.867Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 58.023 ms","timestamp":"2026-04-04T21:06:22.931Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12f1/like 200 55 bytes - 8.525 ms","timestamp":"2026-04-04T21:06:22.942Z"}
+{"level":"http","message":"POST /posts/69d17d4ec066f7726f6f12f1/like 200 56 bytes - 8.764 ms","timestamp":"2026-04-04T21:06:22.954Z"}
+{"level":"http","message":"GET /posts/liked/69d17d4ec066f7726f6f12f5 200 81 bytes - 4.026 ms","timestamp":"2026-04-04T21:06:22.960Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:22.962Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.482 ms","timestamp":"2026-04-04T21:06:23.027Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.998 ms","timestamp":"2026-04-04T21:06:23.036Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 54.460 ms","timestamp":"2026-04-04T21:06:23.093Z"}
+{"level":"http","message":"GET /posts/liked/69d17d4fc066f7726f6f1310 401 77 bytes - 0.272 ms","timestamp":"2026-04-04T21:06:23.096Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.098Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.996 ms","timestamp":"2026-04-04T21:06:23.165Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 6.872 ms","timestamp":"2026-04-04T21:06:23.175Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 58.079 ms","timestamp":"2026-04-04T21:06:23.236Z"}
+{"level":"http","message":"POST /posts/69d17d4fc066f7726f6f131a/like 200 55 bytes - 8.633 ms","timestamp":"2026-04-04T21:06:23.248Z"}
+{"level":"http","message":"GET /posts/liked/69d17d4fc066f7726f6f131e?page=1&limit=5 200 590 bytes - 9.065 ms","timestamp":"2026-04-04T21:06:23.260Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.667Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.686 ms","timestamp":"2026-04-04T21:06:23.762Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.767Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 56.899 ms","timestamp":"2026-04-04T21:06:23.827Z"}
+{"level":"http","message":"POST /auth/register 409 165 bytes - 2.514 ms","timestamp":"2026-04-04T21:06:23.833Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.838Z"}
+{"level":"http","message":"POST /auth/register 400 121 bytes - 0.463 ms","timestamp":"2026-04-04T21:06:23.842Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.844Z"}
+{"level":"http","message":"POST /auth/register 400 113 bytes - 0.556 ms","timestamp":"2026-04-04T21:06:23.849Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.851Z"}
+{"level":"http","message":"POST /auth/register 400 157 bytes - 0.733 ms","timestamp":"2026-04-04T21:06:23.857Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.860Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.586 ms","timestamp":"2026-04-04T21:06:23.926Z"}
+{"level":"http","message":"POST /auth/login 200 590 bytes - 56.093 ms","timestamp":"2026-04-04T21:06:23.985Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:23.988Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.700 ms","timestamp":"2026-04-04T21:06:24.056Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 59.098 ms","timestamp":"2026-04-04T21:06:24.121Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.124Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.012 ms","timestamp":"2026-04-04T21:06:24.187Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 2.557 ms","timestamp":"2026-04-04T21:06:24.193Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.195Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.323 ms","timestamp":"2026-04-04T21:06:24.258Z"}
+{"level":"http","message":"POST /auth/login 400 135 bytes - 0.357 ms","timestamp":"2026-04-04T21:06:24.262Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.264Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.295 ms","timestamp":"2026-04-04T21:06:24.327Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 4.607 ms","timestamp":"2026-04-04T21:06:24.335Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.338Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.313 ms","timestamp":"2026-04-04T21:06:24.401Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 0.431 ms","timestamp":"2026-04-04T21:06:24.404Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.406Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.846 ms","timestamp":"2026-04-04T21:06:24.473Z"}
+{"level":"http","message":"POST /auth/refresh 400 126 bytes - 0.531 ms","timestamp":"2026-04-04T21:06:24.478Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.481Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.526 ms","timestamp":"2026-04-04T21:06:24.544Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 4.112 ms","timestamp":"2026-04-04T21:06:24.551Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 3.870 ms","timestamp":"2026-04-04T21:06:24.558Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 3.771 ms","timestamp":"2026-04-04T21:06:24.565Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.567Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.170 ms","timestamp":"2026-04-04T21:06:24.630Z"}
+{"level":"http","message":"POST /auth/logout 200 61 bytes - 2.569 ms","timestamp":"2026-04-04T21:06:24.637Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:24.641Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 82.137 ms","timestamp":"2026-04-04T21:06:24.728Z"}
+{"level":"http","message":"POST /auth/logout 401 77 bytes - 0.621 ms","timestamp":"2026-04-04T21:06:24.733Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.224Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 74.619 ms","timestamp":"2026-04-04T21:06:25.335Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 12.004 ms","timestamp":"2026-04-04T21:06:25.350Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb88568417929c 201 257 bytes - 11.915 ms","timestamp":"2026-04-04T21:06:25.365Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.370Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.454 ms","timestamp":"2026-04-04T21:06:25.437Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.800 ms","timestamp":"2026-04-04T21:06:25.447Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792ad 401 77 bytes - 0.540 ms","timestamp":"2026-04-04T21:06:25.451Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.459Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.774 ms","timestamp":"2026-04-04T21:06:25.531Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.223 ms","timestamp":"2026-04-04T21:06:25.539Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792b8 400 119 bytes - 0.429 ms","timestamp":"2026-04-04T21:06:25.542Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.544Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.979 ms","timestamp":"2026-04-04T21:06:25.609Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.003 ms","timestamp":"2026-04-04T21:06:25.618Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792c2 400 127 bytes - 0.424 ms","timestamp":"2026-04-04T21:06:25.622Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.624Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.490 ms","timestamp":"2026-04-04T21:06:25.689Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.231 ms","timestamp":"2026-04-04T21:06:25.697Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792cc 201 250 bytes - 8.729 ms","timestamp":"2026-04-04T21:06:25.709Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792cc 201 250 bytes - 8.562 ms","timestamp":"2026-04-04T21:06:25.721Z"}
+{"level":"http","message":"GET /comments/69d17d512ebb8856841792cc 200 534 bytes - 12.125 ms","timestamp":"2026-04-04T21:06:25.736Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.739Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.003 ms","timestamp":"2026-04-04T21:06:25.803Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.827 ms","timestamp":"2026-04-04T21:06:25.811Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792e8 201 250 bytes - 11.834 ms","timestamp":"2026-04-04T21:06:25.826Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb8856841792e8 201 250 bytes - 11.937 ms","timestamp":"2026-04-04T21:06:25.842Z"}
+{"level":"http","message":"GET /comments/69d17d512ebb8856841792e8?page=1&limit=1 200 305 bytes - 11.307 ms","timestamp":"2026-04-04T21:06:25.856Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.859Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.662 ms","timestamp":"2026-04-04T21:06:25.924Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.318 ms","timestamp":"2026-04-04T21:06:25.934Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb885684179304 201 250 bytes - 8.794 ms","timestamp":"2026-04-04T21:06:25.945Z"}
+{"level":"http","message":"POST /comments/69d17d512ebb885684179304 201 250 bytes - 8.168 ms","timestamp":"2026-04-04T21:06:25.956Z"}
+{"level":"http","message":"GET /comments/69d17d512ebb885684179304 200 534 bytes - 8.516 ms","timestamp":"2026-04-04T21:06:25.971Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:25.973Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.367 ms","timestamp":"2026-04-04T21:06:26.037Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.236 ms","timestamp":"2026-04-04T21:06:26.045Z"}
+{"level":"http","message":"POST /comments/69d17d522ebb885684179320 201 252 bytes - 8.356 ms","timestamp":"2026-04-04T21:06:26.056Z"}
+{"level":"http","message":"DELETE /comments/69d17d522ebb885684179326 200 66 bytes - 3.785 ms","timestamp":"2026-04-04T21:06:26.063Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:26.067Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.508 ms","timestamp":"2026-04-04T21:06:26.133Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.797 ms","timestamp":"2026-04-04T21:06:26.142Z"}
+{"level":"http","message":"POST /comments/69d17d522ebb885684179333 201 252 bytes - 9.263 ms","timestamp":"2026-04-04T21:06:26.154Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 54.476 ms","timestamp":"2026-04-04T21:06:26.212Z"}
+{"level":"http","message":"DELETE /comments/69d17d522ebb885684179339 403 146 bytes - 2.462 ms","timestamp":"2026-04-04T21:06:26.217Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:06:26.221Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.717 ms","timestamp":"2026-04-04T21:06:26.289Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.284 ms","timestamp":"2026-04-04T21:06:26.297Z"}
+{"level":"http","message":"POST /comments/69d17d522ebb885684179349 201 252 bytes - 8.570 ms","timestamp":"2026-04-04T21:06:26.308Z"}
+{"level":"http","message":"DELETE /comments/69d17d522ebb88568417934f 401 77 bytes - 0.277 ms","timestamp":"2026-04-04T21:06:26.311Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:09:32.422Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 107.868 ms","timestamp":"2026-04-04T21:09:32.599Z"}
+{"level":"http","message":"POST /posts 201 516 bytes - 95668.370 ms","timestamp":"2026-04-04T21:11:08.278Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:16.237Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 95.664 ms","timestamp":"2026-04-04T21:14:16.394Z"}
+{"level":"http","message":"POST /posts 201 532 bytes - 26.449 ms","timestamp":"2026-04-04T21:14:16.428Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:16.851Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 68.705 ms","timestamp":"2026-04-04T21:14:16.950Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 14.493 ms","timestamp":"2026-04-04T21:14:16.968Z"}
+{"level":"http","message":"POST /comments/69d17f280f85c4633f478b84 201 257 bytes - 14.095 ms","timestamp":"2026-04-04T21:14:16.986Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:16.992Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 68.484 ms","timestamp":"2026-04-04T21:14:17.069Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.798 ms","timestamp":"2026-04-04T21:14:17.079Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478b95 401 77 bytes - 0.513 ms","timestamp":"2026-04-04T21:14:17.083Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.089Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.209 ms","timestamp":"2026-04-04T21:14:17.156Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.137 ms","timestamp":"2026-04-04T21:14:17.167Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478ba0 400 119 bytes - 0.806 ms","timestamp":"2026-04-04T21:14:17.172Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.175Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.840 ms","timestamp":"2026-04-04T21:14:17.243Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.001 ms","timestamp":"2026-04-04T21:14:17.257Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478baa 400 127 bytes - 0.675 ms","timestamp":"2026-04-04T21:14:17.262Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.265Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.030 ms","timestamp":"2026-04-04T21:14:17.332Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.681 ms","timestamp":"2026-04-04T21:14:17.343Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bb4 201 250 bytes - 13.554 ms","timestamp":"2026-04-04T21:14:17.360Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bb4 201 250 bytes - 15.606 ms","timestamp":"2026-04-04T21:14:17.379Z"}
+{"level":"http","message":"GET /comments/69d17f290f85c4633f478bb4 200 534 bytes - 13.818 ms","timestamp":"2026-04-04T21:14:17.397Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.399Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.897 ms","timestamp":"2026-04-04T21:14:17.473Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.862 ms","timestamp":"2026-04-04T21:14:17.482Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bd0 201 250 bytes - 11.142 ms","timestamp":"2026-04-04T21:14:17.501Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bd0 201 250 bytes - 9.624 ms","timestamp":"2026-04-04T21:14:17.514Z"}
+{"level":"http","message":"GET /comments/69d17f290f85c4633f478bd0?page=1&limit=1 200 305 bytes - 11.749 ms","timestamp":"2026-04-04T21:14:17.530Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.533Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.320 ms","timestamp":"2026-04-04T21:14:17.600Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.921 ms","timestamp":"2026-04-04T21:14:17.610Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bec 201 250 bytes - 13.659 ms","timestamp":"2026-04-04T21:14:17.627Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478bec 201 250 bytes - 9.832 ms","timestamp":"2026-04-04T21:14:17.640Z"}
+{"level":"http","message":"GET /comments/69d17f290f85c4633f478bec 200 534 bytes - 9.651 ms","timestamp":"2026-04-04T21:14:17.653Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.656Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.763 ms","timestamp":"2026-04-04T21:14:17.728Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.568 ms","timestamp":"2026-04-04T21:14:17.737Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478c08 201 252 bytes - 9.963 ms","timestamp":"2026-04-04T21:14:17.751Z"}
+{"level":"http","message":"DELETE /comments/69d17f290f85c4633f478c0e 200 66 bytes - 6.188 ms","timestamp":"2026-04-04T21:14:17.761Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.766Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.778 ms","timestamp":"2026-04-04T21:14:17.842Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.486 ms","timestamp":"2026-04-04T21:14:17.850Z"}
+{"level":"http","message":"POST /comments/69d17f290f85c4633f478c1b 201 252 bytes - 9.675 ms","timestamp":"2026-04-04T21:14:17.863Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 65.757 ms","timestamp":"2026-04-04T21:14:17.932Z"}
+{"level":"http","message":"DELETE /comments/69d17f290f85c4633f478c21 403 146 bytes - 3.661 ms","timestamp":"2026-04-04T21:14:17.940Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:17.946Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 89.649 ms","timestamp":"2026-04-04T21:14:18.052Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 8.572 ms","timestamp":"2026-04-04T21:14:18.066Z"}
+{"level":"http","message":"POST /comments/69d17f2a0f85c4633f478c31 201 252 bytes - 14.514 ms","timestamp":"2026-04-04T21:14:18.087Z"}
+{"level":"http","message":"DELETE /comments/69d17f2a0f85c4633f478c37 401 77 bytes - 0.313 ms","timestamp":"2026-04-04T21:14:18.091Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.448Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 67.952 ms","timestamp":"2026-04-04T21:14:18.537Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.543Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.156 ms","timestamp":"2026-04-04T21:14:18.605Z"}
+{"level":"http","message":"POST /auth/register 409 165 bytes - 2.682 ms","timestamp":"2026-04-04T21:14:18.611Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.615Z"}
+{"level":"http","message":"POST /auth/register 400 121 bytes - 0.460 ms","timestamp":"2026-04-04T21:14:18.620Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.622Z"}
+{"level":"http","message":"POST /auth/register 400 113 bytes - 0.448 ms","timestamp":"2026-04-04T21:14:18.626Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.628Z"}
+{"level":"http","message":"POST /auth/register 400 157 bytes - 0.347 ms","timestamp":"2026-04-04T21:14:18.632Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.634Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.600 ms","timestamp":"2026-04-04T21:14:18.702Z"}
+{"level":"http","message":"POST /auth/login 200 590 bytes - 56.071 ms","timestamp":"2026-04-04T21:14:18.761Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.763Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 87.553 ms","timestamp":"2026-04-04T21:14:18.855Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 59.119 ms","timestamp":"2026-04-04T21:14:18.920Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.923Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.418 ms","timestamp":"2026-04-04T21:14:18.988Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 2.753 ms","timestamp":"2026-04-04T21:14:18.994Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:18.997Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.772 ms","timestamp":"2026-04-04T21:14:19.061Z"}
+{"level":"http","message":"POST /auth/login 400 135 bytes - 0.414 ms","timestamp":"2026-04-04T21:14:19.065Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.067Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.423 ms","timestamp":"2026-04-04T21:14:19.133Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 5.248 ms","timestamp":"2026-04-04T21:14:19.142Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.146Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.132 ms","timestamp":"2026-04-04T21:14:19.210Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 0.435 ms","timestamp":"2026-04-04T21:14:19.213Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.215Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.756 ms","timestamp":"2026-04-04T21:14:19.279Z"}
+{"level":"http","message":"POST /auth/refresh 400 126 bytes - 0.412 ms","timestamp":"2026-04-04T21:14:19.283Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.285Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.038 ms","timestamp":"2026-04-04T21:14:19.350Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 6.015 ms","timestamp":"2026-04-04T21:14:19.359Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 4.337 ms","timestamp":"2026-04-04T21:14:19.366Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 6.167 ms","timestamp":"2026-04-04T21:14:19.375Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.378Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.242 ms","timestamp":"2026-04-04T21:14:19.443Z"}
+{"level":"http","message":"POST /auth/logout 200 61 bytes - 3.235 ms","timestamp":"2026-04-04T21:14:19.450Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:14:19.454Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.450 ms","timestamp":"2026-04-04T21:14:19.516Z"}
+{"level":"http","message":"POST /auth/logout 401 77 bytes - 0.291 ms","timestamp":"2026-04-04T21:14:19.520Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.242Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 92.195 ms","timestamp":"2026-04-04T21:15:43.403Z"}
+{"level":"http","message":"POST /posts 201 532 bytes - 22.882 ms","timestamp":"2026-04-04T21:15:43.439Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.447Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.606 ms","timestamp":"2026-04-04T21:15:43.523Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 9.090 ms","timestamp":"2026-04-04T21:15:43.536Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.539Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.741 ms","timestamp":"2026-04-04T21:15:43.617Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 8.691 ms","timestamp":"2026-04-04T21:15:43.630Z"}
+{"level":"http","message":"PUT /posts/69d17f7f379e8db769875ccd 200 517 bytes - 19.843 ms","timestamp":"2026-04-04T21:15:43.655Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.657Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.389 ms","timestamp":"2026-04-04T21:15:43.727Z"}
+{"level":"http","message":"POST /posts 400 197 bytes - 1.507 ms","timestamp":"2026-04-04T21:15:43.735Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.738Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.389 ms","timestamp":"2026-04-04T21:15:43.813Z"}
+{"level":"http","message":"POST /posts 400 211 bytes - 0.763 ms","timestamp":"2026-04-04T21:15:43.820Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.822Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.378 ms","timestamp":"2026-04-04T21:15:43.890Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 10.349 ms","timestamp":"2026-04-04T21:15:43.904Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:43.912Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.607 ms","timestamp":"2026-04-04T21:15:43.985Z"}
+{"level":"http","message":"POST /posts 201 564 bytes - 6.333 ms","timestamp":"2026-04-04T21:15:43.995Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.001Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.868 ms","timestamp":"2026-04-04T21:15:44.071Z"}
+{"level":"http","message":"POST /posts 401 77 bytes - 0.430 ms","timestamp":"2026-04-04T21:15:44.075Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.078Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.670 ms","timestamp":"2026-04-04T21:15:44.157Z"}
+{"level":"http","message":"POST /posts 400 187 bytes - 1.156 ms","timestamp":"2026-04-04T21:15:44.163Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.170Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 68.972 ms","timestamp":"2026-04-04T21:15:44.246Z"}
+{"level":"http","message":"POST /posts 400 577 bytes - 1.174 ms","timestamp":"2026-04-04T21:15:44.252Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.257Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 86.932 ms","timestamp":"2026-04-04T21:15:44.358Z"}
+{"level":"http","message":"POST /posts 400 133 bytes - 0.895 ms","timestamp":"2026-04-04T21:15:44.363Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.366Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 66.562 ms","timestamp":"2026-04-04T21:15:44.442Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 10.298 ms","timestamp":"2026-04-04T21:15:44.458Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 10.991 ms","timestamp":"2026-04-04T21:15:44.475Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 9.387 ms","timestamp":"2026-04-04T21:15:44.491Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 7.040 ms","timestamp":"2026-04-04T21:15:44.503Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 9.493 ms","timestamp":"2026-04-04T21:15:44.516Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.593 ms","timestamp":"2026-04-04T21:15:44.525Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 8.053 ms","timestamp":"2026-04-04T21:15:44.537Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 8.093 ms","timestamp":"2026-04-04T21:15:44.549Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 6.422 ms","timestamp":"2026-04-04T21:15:44.559Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 7.707 ms","timestamp":"2026-04-04T21:15:44.572Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 9.252 ms","timestamp":"2026-04-04T21:15:44.586Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 8.703 ms","timestamp":"2026-04-04T21:15:44.599Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.272 ms","timestamp":"2026-04-04T21:15:44.609Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 6.066 ms","timestamp":"2026-04-04T21:15:44.619Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.933 ms","timestamp":"2026-04-04T21:15:44.628Z"}
+{"level":"http","message":"GET /posts?page=1&limit=10 200 4920 bytes - 14.332 ms","timestamp":"2026-04-04T21:15:44.648Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.652Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.621 ms","timestamp":"2026-04-04T21:15:44.728Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.658 ms","timestamp":"2026-04-04T21:15:44.737Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.189 ms","timestamp":"2026-04-04T21:15:44.745Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.971 ms","timestamp":"2026-04-04T21:15:44.754Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.319 ms","timestamp":"2026-04-04T21:15:44.764Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.139 ms","timestamp":"2026-04-04T21:15:44.773Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 5.545 ms","timestamp":"2026-04-04T21:15:44.782Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 4.415 ms","timestamp":"2026-04-04T21:15:44.790Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.084 ms","timestamp":"2026-04-04T21:15:44.800Z"}
+{"level":"http","message":"POST /posts 201 505 bytes - 5.586 ms","timestamp":"2026-04-04T21:15:44.808Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.167 ms","timestamp":"2026-04-04T21:15:44.818Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 6.332 ms","timestamp":"2026-04-04T21:15:44.828Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 6.520 ms","timestamp":"2026-04-04T21:15:44.838Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 8.861 ms","timestamp":"2026-04-04T21:15:44.850Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 6.750 ms","timestamp":"2026-04-04T21:15:44.860Z"}
+{"level":"http","message":"POST /posts 201 507 bytes - 7.168 ms","timestamp":"2026-04-04T21:15:44.872Z"}
+{"level":"http","message":"GET /posts?page=1&limit=5 200 2503 bytes - 11.287 ms","timestamp":"2026-04-04T21:15:44.888Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:44.891Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 79.614 ms","timestamp":"2026-04-04T21:15:44.983Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 9.741 ms","timestamp":"2026-04-04T21:15:44.998Z"}
+{"level":"http","message":"GET /posts/69d17f80379e8db769875d8f 200 519 bytes - 14.309 ms","timestamp":"2026-04-04T21:15:45.018Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.023Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 69.994 ms","timestamp":"2026-04-04T21:15:45.107Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.268 ms","timestamp":"2026-04-04T21:15:45.119Z"}
+{"level":"http","message":"GET /posts/invalid-id 500 280 bytes - 2.549 ms","timestamp":"2026-04-04T21:15:45.126Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.129Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.293 ms","timestamp":"2026-04-04T21:15:45.198Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.596 ms","timestamp":"2026-04-04T21:15:45.210Z"}
+{"level":"http","message":"PUT /posts/69d17f81379e8db769875da6 200 527 bytes - 18.836 ms","timestamp":"2026-04-04T21:15:45.232Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.240Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 104.021 ms","timestamp":"2026-04-04T21:15:45.357Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 11.269 ms","timestamp":"2026-04-04T21:15:45.375Z"}
+{"level":"http","message":"PUT /posts/69d17f81379e8db769875db8 200 538 bytes - 20.868 ms","timestamp":"2026-04-04T21:15:45.403Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.410Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 72.073 ms","timestamp":"2026-04-04T21:15:45.493Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.642 ms","timestamp":"2026-04-04T21:15:45.503Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 63.712 ms","timestamp":"2026-04-04T21:15:45.570Z"}
+{"level":"http","message":"PUT /posts/69d17f81379e8db769875dca 403 136 bytes - 5.601 ms","timestamp":"2026-04-04T21:15:45.579Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.581Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.845 ms","timestamp":"2026-04-04T21:15:45.647Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.415 ms","timestamp":"2026-04-04T21:15:45.658Z"}
+{"level":"http","message":"DELETE /posts/69d17f81379e8db769875ddb 200 63 bytes - 9.150 ms","timestamp":"2026-04-04T21:15:45.670Z"}
+{"level":"http","message":"GET /posts/69d17f81379e8db769875ddb 404 102 bytes - 3.350 ms","timestamp":"2026-04-04T21:15:45.677Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.680Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.429 ms","timestamp":"2026-04-04T21:15:45.750Z"}
+{"level":"http","message":"POST /auth/register 201 576 bytes - 55.691 ms","timestamp":"2026-04-04T21:15:45.809Z"}
+{"level":"http","message":"POST /auth/register 201 576 bytes - 57.754 ms","timestamp":"2026-04-04T21:15:45.870Z"}
+{"level":"http","message":"POST /posts 201 492 bytes - 5.674 ms","timestamp":"2026-04-04T21:15:45.879Z"}
+{"level":"http","message":"GET /posts/user/69d17f81379e8db769875ded 200 549 bytes - 7.217 ms","timestamp":"2026-04-04T21:15:45.889Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:45.891Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 118.900 ms","timestamp":"2026-04-04T21:15:46.019Z"}
+{"level":"http","message":"POST /auth/register 201 595 bytes - 65.569 ms","timestamp":"2026-04-04T21:15:46.088Z"}
+{"level":"http","message":"GET /posts/user/69d17f82379e8db769875e03 200 81 bytes - 4.767 ms","timestamp":"2026-04-04T21:15:46.096Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.098Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 62.901 ms","timestamp":"2026-04-04T21:15:46.168Z"}
+{"level":"http","message":"GET /posts/user/69d17f82379e8db769875e10 401 77 bytes - 0.249 ms","timestamp":"2026-04-04T21:15:46.171Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.173Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.721 ms","timestamp":"2026-04-04T21:15:46.241Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.544 ms","timestamp":"2026-04-04T21:15:46.252Z"}
+{"level":"http","message":"GET /posts/69d17f82379e8db769875e18 200 519 bytes - 5.893 ms","timestamp":"2026-04-04T21:15:46.261Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.263Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.094 ms","timestamp":"2026-04-04T21:15:46.333Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.435 ms","timestamp":"2026-04-04T21:15:46.342Z"}
+{"level":"http","message":"POST /comments/69d17f82379e8db769875e25 201 252 bytes - 18.196 ms","timestamp":"2026-04-04T21:15:46.364Z"}
+{"level":"http","message":"POST /comments/69d17f82379e8db769875e25 201 253 bytes - 17.241 ms","timestamp":"2026-04-04T21:15:46.388Z"}
+{"level":"http","message":"GET /posts/69d17f82379e8db769875e25 200 519 bytes - 6.950 ms","timestamp":"2026-04-04T21:15:46.400Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.403Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 67.532 ms","timestamp":"2026-04-04T21:15:46.481Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.572 ms","timestamp":"2026-04-04T21:15:46.491Z"}
+{"level":"http","message":"POST /comments/69d17f82379e8db769875e3e 201 252 bytes - 8.824 ms","timestamp":"2026-04-04T21:15:46.504Z"}
+{"level":"http","message":"POST /comments/69d17f82379e8db769875e3e 201 253 bytes - 10.118 ms","timestamp":"2026-04-04T21:15:46.517Z"}
+{"level":"http","message":"DELETE /comments/69d17f82379e8db769875e4a 200 66 bytes - 5.618 ms","timestamp":"2026-04-04T21:15:46.526Z"}
+{"level":"http","message":"GET /posts/69d17f82379e8db769875e3e 200 519 bytes - 5.232 ms","timestamp":"2026-04-04T21:15:46.535Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.537Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 65.408 ms","timestamp":"2026-04-04T21:15:46.610Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.503 ms","timestamp":"2026-04-04T21:15:46.619Z"}
+{"level":"http","message":"POST /posts 201 514 bytes - 5.430 ms","timestamp":"2026-04-04T21:15:46.628Z"}
+{"level":"http","message":"POST /comments/69d17f82379e8db769875e59 201 260 bytes - 9.410 ms","timestamp":"2026-04-04T21:15:46.641Z"}
+{"level":"http","message":"GET /posts?page=1&limit=10 200 1067 bytes - 7.030 ms","timestamp":"2026-04-04T21:15:46.652Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.655Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.069 ms","timestamp":"2026-04-04T21:15:46.721Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 7.920 ms","timestamp":"2026-04-04T21:15:46.733Z"}
+{"level":"http","message":"POST /posts/69d17f82379e8db769875e70/like 200 55 bytes - 9.459 ms","timestamp":"2026-04-04T21:15:46.746Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.749Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.150 ms","timestamp":"2026-04-04T21:15:46.816Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.074 ms","timestamp":"2026-04-04T21:15:46.825Z"}
+{"level":"http","message":"POST /posts/69d17f82379e8db769875e7f/like 200 55 bytes - 8.158 ms","timestamp":"2026-04-04T21:15:46.837Z"}
+{"level":"http","message":"POST /posts/69d17f82379e8db769875e7f/like 200 56 bytes - 11.714 ms","timestamp":"2026-04-04T21:15:46.851Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:46.854Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.776 ms","timestamp":"2026-04-04T21:15:46.923Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.746 ms","timestamp":"2026-04-04T21:15:46.933Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 54.842 ms","timestamp":"2026-04-04T21:15:46.991Z"}
+{"level":"http","message":"POST /posts/69d17f82379e8db769875e93/like 200 55 bytes - 12.208 ms","timestamp":"2026-04-04T21:15:47.006Z"}
+{"level":"http","message":"GET /posts/liked/69d17f82379e8db769875e97 200 591 bytes - 8.287 ms","timestamp":"2026-04-04T21:15:47.018Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:47.021Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 72.218 ms","timestamp":"2026-04-04T21:15:47.103Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 7.423 ms","timestamp":"2026-04-04T21:15:47.115Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 61.931 ms","timestamp":"2026-04-04T21:15:47.181Z"}
+{"level":"http","message":"GET /posts/liked/69d17f83379e8db769875eae 200 81 bytes - 5.068 ms","timestamp":"2026-04-04T21:15:47.189Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:47.192Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.252 ms","timestamp":"2026-04-04T21:15:47.260Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.561 ms","timestamp":"2026-04-04T21:15:47.269Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 58.342 ms","timestamp":"2026-04-04T21:15:47.331Z"}
+{"level":"http","message":"POST /posts/69d17f83379e8db769875ebb/like 200 55 bytes - 8.830 ms","timestamp":"2026-04-04T21:15:47.343Z"}
+{"level":"http","message":"POST /posts/69d17f83379e8db769875ebb/like 200 56 bytes - 8.629 ms","timestamp":"2026-04-04T21:15:47.355Z"}
+{"level":"http","message":"GET /posts/liked/69d17f83379e8db769875ebf 200 81 bytes - 5.371 ms","timestamp":"2026-04-04T21:15:47.364Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:47.367Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 68.167 ms","timestamp":"2026-04-04T21:15:47.446Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 5.021 ms","timestamp":"2026-04-04T21:15:47.454Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 54.075 ms","timestamp":"2026-04-04T21:15:47.511Z"}
+{"level":"http","message":"GET /posts/liked/69d17f83379e8db769875eda 401 77 bytes - 0.264 ms","timestamp":"2026-04-04T21:15:47.517Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:47.519Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.811 ms","timestamp":"2026-04-04T21:15:47.585Z"}
+{"level":"http","message":"POST /posts 201 509 bytes - 6.521 ms","timestamp":"2026-04-04T21:15:47.595Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 58.576 ms","timestamp":"2026-04-04T21:15:47.656Z"}
+{"level":"http","message":"POST /posts/69d17f83379e8db769875ee4/like 200 55 bytes - 11.336 ms","timestamp":"2026-04-04T21:15:47.671Z"}
+{"level":"http","message":"GET /posts/liked/69d17f83379e8db769875ee8?page=1&limit=5 200 590 bytes - 8.761 ms","timestamp":"2026-04-04T21:15:47.683Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.129Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 70.921 ms","timestamp":"2026-04-04T21:15:48.256Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 13.103 ms","timestamp":"2026-04-04T21:15:48.272Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ab4 201 257 bytes - 16.333 ms","timestamp":"2026-04-04T21:15:48.292Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.298Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.722 ms","timestamp":"2026-04-04T21:15:48.370Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 11.828 ms","timestamp":"2026-04-04T21:15:48.387Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ac5 401 77 bytes - 0.527 ms","timestamp":"2026-04-04T21:15:48.392Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.398Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.616 ms","timestamp":"2026-04-04T21:15:48.466Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.179 ms","timestamp":"2026-04-04T21:15:48.474Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ad0 400 119 bytes - 0.455 ms","timestamp":"2026-04-04T21:15:48.478Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.481Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.620 ms","timestamp":"2026-04-04T21:15:48.553Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 6.635 ms","timestamp":"2026-04-04T21:15:48.563Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ada 400 127 bytes - 0.456 ms","timestamp":"2026-04-04T21:15:48.567Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.569Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.448 ms","timestamp":"2026-04-04T21:15:48.639Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 8.555 ms","timestamp":"2026-04-04T21:15:48.653Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ae4 201 250 bytes - 13.587 ms","timestamp":"2026-04-04T21:15:48.671Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0ae4 201 250 bytes - 9.687 ms","timestamp":"2026-04-04T21:15:48.684Z"}
+{"level":"http","message":"GET /comments/69d17f842a95317aefcd0ae4 200 534 bytes - 10.219 ms","timestamp":"2026-04-04T21:15:48.701Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.703Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.614 ms","timestamp":"2026-04-04T21:15:48.774Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.413 ms","timestamp":"2026-04-04T21:15:48.783Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0b00 201 250 bytes - 10.713 ms","timestamp":"2026-04-04T21:15:48.797Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0b00 201 250 bytes - 7.831 ms","timestamp":"2026-04-04T21:15:48.808Z"}
+{"level":"http","message":"GET /comments/69d17f842a95317aefcd0b00?page=1&limit=1 200 305 bytes - 9.120 ms","timestamp":"2026-04-04T21:15:48.821Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.823Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.679 ms","timestamp":"2026-04-04T21:15:48.891Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.921 ms","timestamp":"2026-04-04T21:15:48.901Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0b1c 201 250 bytes - 11.004 ms","timestamp":"2026-04-04T21:15:48.915Z"}
+{"level":"http","message":"POST /comments/69d17f842a95317aefcd0b1c 201 250 bytes - 12.978 ms","timestamp":"2026-04-04T21:15:48.931Z"}
+{"level":"http","message":"GET /comments/69d17f842a95317aefcd0b1c 200 534 bytes - 8.652 ms","timestamp":"2026-04-04T21:15:48.942Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:48.945Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 60.788 ms","timestamp":"2026-04-04T21:15:49.012Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.649 ms","timestamp":"2026-04-04T21:15:49.020Z"}
+{"level":"http","message":"POST /comments/69d17f852a95317aefcd0b38 201 252 bytes - 9.875 ms","timestamp":"2026-04-04T21:15:49.033Z"}
+{"level":"http","message":"DELETE /comments/69d17f852a95317aefcd0b3e 200 66 bytes - 3.991 ms","timestamp":"2026-04-04T21:15:49.040Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.045Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.634 ms","timestamp":"2026-04-04T21:15:49.116Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 5.527 ms","timestamp":"2026-04-04T21:15:49.125Z"}
+{"level":"http","message":"POST /comments/69d17f852a95317aefcd0b4b 201 252 bytes - 8.827 ms","timestamp":"2026-04-04T21:15:49.138Z"}
+{"level":"http","message":"POST /auth/register 201 594 bytes - 57.381 ms","timestamp":"2026-04-04T21:15:49.198Z"}
+{"level":"http","message":"DELETE /comments/69d17f852a95317aefcd0b51 403 146 bytes - 2.357 ms","timestamp":"2026-04-04T21:15:49.203Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.210Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 64.988 ms","timestamp":"2026-04-04T21:15:49.283Z"}
+{"level":"http","message":"POST /posts 201 519 bytes - 4.920 ms","timestamp":"2026-04-04T21:15:49.291Z"}
+{"level":"http","message":"POST /comments/69d17f852a95317aefcd0b61 201 252 bytes - 9.728 ms","timestamp":"2026-04-04T21:15:49.303Z"}
+{"level":"http","message":"DELETE /comments/69d17f852a95317aefcd0b67 401 77 bytes - 0.226 ms","timestamp":"2026-04-04T21:15:49.307Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.766Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 72.597 ms","timestamp":"2026-04-04T21:15:49.860Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.865Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.520 ms","timestamp":"2026-04-04T21:15:49.928Z"}
+{"level":"http","message":"POST /auth/register 409 165 bytes - 2.587 ms","timestamp":"2026-04-04T21:15:49.934Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.938Z"}
+{"level":"http","message":"POST /auth/register 400 121 bytes - 0.413 ms","timestamp":"2026-04-04T21:15:49.942Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.944Z"}
+{"level":"http","message":"POST /auth/register 400 113 bytes - 0.422 ms","timestamp":"2026-04-04T21:15:49.949Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.951Z"}
+{"level":"http","message":"POST /auth/register 400 157 bytes - 0.345 ms","timestamp":"2026-04-04T21:15:49.955Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:49.957Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 63.529 ms","timestamp":"2026-04-04T21:15:50.027Z"}
+{"level":"http","message":"POST /auth/login 200 590 bytes - 52.197 ms","timestamp":"2026-04-04T21:15:50.083Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.086Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.194 ms","timestamp":"2026-04-04T21:15:50.150Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 53.137 ms","timestamp":"2026-04-04T21:15:50.206Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.209Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.587 ms","timestamp":"2026-04-04T21:15:50.273Z"}
+{"level":"http","message":"POST /auth/login 401 129 bytes - 2.147 ms","timestamp":"2026-04-04T21:15:50.279Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.281Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.956 ms","timestamp":"2026-04-04T21:15:50.343Z"}
+{"level":"http","message":"POST /auth/login 400 135 bytes - 0.407 ms","timestamp":"2026-04-04T21:15:50.347Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.350Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 58.706 ms","timestamp":"2026-04-04T21:15:50.413Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 6.437 ms","timestamp":"2026-04-04T21:15:50.423Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.428Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 59.919 ms","timestamp":"2026-04-04T21:15:50.492Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 0.418 ms","timestamp":"2026-04-04T21:15:50.496Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.498Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 57.732 ms","timestamp":"2026-04-04T21:15:50.562Z"}
+{"level":"http","message":"POST /auth/refresh 400 126 bytes - 0.349 ms","timestamp":"2026-04-04T21:15:50.565Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.567Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 61.315 ms","timestamp":"2026-04-04T21:15:50.632Z"}
+{"level":"http","message":"POST /auth/refresh 200 590 bytes - 5.745 ms","timestamp":"2026-04-04T21:15:50.642Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 5.734 ms","timestamp":"2026-04-04T21:15:50.651Z"}
+{"level":"http","message":"POST /auth/refresh 401 123 bytes - 4.660 ms","timestamp":"2026-04-04T21:15:50.659Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.663Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 67.587 ms","timestamp":"2026-04-04T21:15:50.735Z"}
+{"level":"http","message":"POST /auth/logout 200 61 bytes - 2.755 ms","timestamp":"2026-04-04T21:15:50.742Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2026-04-04T21:15:50.746Z"}
+{"level":"http","message":"POST /auth/register 201 590 bytes - 56.622 ms","timestamp":"2026-04-04T21:15:50.807Z"}
+{"level":"http","message":"POST /auth/logout 401 77 bytes - 0.318 ms","timestamp":"2026-04-04T21:15:50.811Z"}
