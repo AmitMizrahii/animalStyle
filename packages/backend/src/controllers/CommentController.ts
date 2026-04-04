@@ -19,6 +19,7 @@ export class CommentController {
       const { page, limit } = parseOrThrow(paginationSchema, req.query);
 
       const post = await this.postRepo.findById(postId);
+
       if (!post) {
         throw new AppError("Post not found", "POST_NOT_FOUND", 404);
       }
@@ -60,6 +61,7 @@ export class CommentController {
       }
 
       const post = await this.postRepo.findById(postId);
+
       if (!post) {
         throw new AppError("Post not found", "POST_NOT_FOUND", 404);
       }

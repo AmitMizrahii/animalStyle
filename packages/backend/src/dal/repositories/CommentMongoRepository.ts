@@ -58,6 +58,7 @@ export class CommentMongoRepository implements ICommentRepository {
 
   async findById(id: string): Promise<IComment | null> {
     const doc = await Comment.findById(id);
+
     if (!doc) return null;
 
     return {
@@ -75,6 +76,7 @@ export class CommentMongoRepository implements ICommentRepository {
     const populated: PopulatedCommentDoc = await doc.populate<{
       userId: IUserDocument;
     }>("userId");
+
     return toCommentWithUser(populated);
   }
 
@@ -96,6 +98,7 @@ export class CommentMongoRepository implements ICommentRepository {
       { $match: { postId: { $in: objectIds } } },
       { $group: { _id: "$postId", count: { $sum: 1 } } },
     ]);
+
     return new Map(counts.map((c) => [c._id.toString(), c.count]));
   }
 }

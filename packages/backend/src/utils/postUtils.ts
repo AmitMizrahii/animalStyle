@@ -9,10 +9,6 @@ function toPublicUser(user: IUser): User {
   };
 }
 
-/**
- * Minimal structural type for a post with its author resolved to a plain IUser.
- * Repositories return objects matching this shape after population.
- */
 export type PopulatedPost = {
   _id: { toString(): string };
   name: string;
@@ -33,9 +29,6 @@ export type PopulatedPost = {
   adoptionStatus: "available" | "pending" | "adopted";
 };
 
-/**
- * Minimal structural type for a comment with its author resolved to a plain IUser.
- */
 export type PopulatedComment = {
   _id: { toString(): string };
   postId: { toString(): string };
@@ -44,9 +37,6 @@ export type PopulatedComment = {
   createdAt?: Date;
 };
 
-/**
- * Converts a populated comment to a plain Comment.
- */
 export function buildCommentResponse(comment: PopulatedComment): Comment {
   return {
     _id: comment._id.toString(),
@@ -57,9 +47,6 @@ export function buildCommentResponse(comment: PopulatedComment): Comment {
   };
 }
 
-/**
- * Converts a populated post to a plain AnimalPost.
- */
 export function buildPostResponse(
   post: PopulatedPost,
   userId?: string,
