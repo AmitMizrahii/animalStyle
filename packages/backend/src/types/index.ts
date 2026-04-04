@@ -1,4 +1,4 @@
-export type { User, UserWithToken, ApiError } from "shared";
+export type * from "shared";
 
 export interface IUser {
   _id?: string;
