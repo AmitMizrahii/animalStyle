@@ -90,7 +90,7 @@ export class AnimalPostController {
       if (existing.createdBy._id?.toString() !== req.userId) {
         throw new AppError(
           "You can only edit your own posts",
-          "UNAUTHORIZED",
+          "FORBIDDEN",
           403,
         );
       }
@@ -126,7 +126,7 @@ export class AnimalPostController {
       if (post.createdBy._id?.toString() !== req.userId) {
         throw new AppError(
           "You can only delete your own posts",
-          "UNAUTHORIZED",
+          "FORBIDDEN",
           403,
         );
       }

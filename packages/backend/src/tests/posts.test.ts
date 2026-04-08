@@ -82,6 +82,9 @@ describe("Animal Post Controller", () => {
       expect(saved?.size).toBe("medium");
       expect(saved?.vaccinated).toBe(true);
       expect(saved?.neutered).toBe(true);
+      expect(saved?.goodWithKids).toBe(true);
+      expect(saved?.goodWithOtherAnimals).toBe(false);
+      expect(saved?.adoptionStatus).toBe("available");
     });
 
     it("should default adoptionStatus to available and booleans to false", async () => {
