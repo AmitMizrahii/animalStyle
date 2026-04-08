@@ -7,6 +7,7 @@ import requestLogger from "./middleware/requestLogger";
 import { createAuthRoutes } from "./routes/authRoutes";
 import { createCommentRoutes } from "./routes/commentRoutes";
 import { createPostRoutes } from "./routes/postRoutes";
+import { createUserRoutes } from "./routes/userRoutes";
 import logger from "./utils/logger";
 
 dotenv.config({ path: ".env.dev" });
@@ -38,6 +39,8 @@ const initializeApp = (): Promise<Express> => {
     });
 
     app.use("/auth", createAuthRoutes(userRepository));
+    app.use("/users", createUserRoutes(userRepository));
+
     app.use("/posts", createPostRoutes(postRepository, commentRepository));
     app.use(
       "/comments",

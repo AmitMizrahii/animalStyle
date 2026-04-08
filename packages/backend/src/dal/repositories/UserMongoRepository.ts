@@ -1,6 +1,10 @@
 import { User, IUserDocument } from "../../models/User";
 import { IUser } from "../../types";
-import { IUserRepository, CreateUserData } from "../interfaces/IUserRepository";
+import {
+  IUserRepository,
+  CreateUserData,
+  UpdateProfileData,
+} from "../interfaces/IUserRepository";
 
 function toUser(doc: IUserDocument): IUser {
   return {
@@ -57,5 +61,23 @@ export class UserMongoRepository implements IUserRepository {
   ): Promise<boolean> {
     const doc = await User.findOne({ username, _id: { $ne: excludeUserId } });
     return doc !== null;
+  }
+
+  async updateProfile(
+    id: string,
+    data: UpdateProfileData,
+  ): Promise<IUser | null> {
+    const doc = await User.findById(id);
+
+    if (!doc) return null;
+
+    if (data.username !== undefined) doc.username = data.username;
+
+    if (data.profileImagePath !== undefined)
+      doc.profileImagePath = data.profileImagePath;
+
+    await doc.save();
+
+    return toUser(doc);
   }
 }
