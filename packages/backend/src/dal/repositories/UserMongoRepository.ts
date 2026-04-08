@@ -68,13 +68,16 @@ export class UserMongoRepository implements IUserRepository {
     data: UpdateProfileData,
   ): Promise<IUser | null> {
     const doc = await User.findById(id);
+
     if (!doc) return null;
 
     if (data.username !== undefined) doc.username = data.username;
+
     if (data.profileImagePath !== undefined)
       doc.profileImagePath = data.profileImagePath;
 
     await doc.save();
+
     return toUser(doc);
   }
 }
