@@ -7,6 +7,11 @@ export interface CreateUserData {
   profileImagePath?: string;
 }
 
+export interface UpdateProfileData {
+  username?: string;
+  profileImagePath?: string;
+}
+
 export interface IUserRepository {
   findByEmailOrUsername(email: string, username: string): Promise<IUser | null>;
 
@@ -24,4 +29,6 @@ export interface IUserRepository {
     username: string,
     excludeUserId: string,
   ): Promise<boolean>;
+
+  updateProfile(id: string, data: UpdateProfileData): Promise<IUser | null>;
 }
