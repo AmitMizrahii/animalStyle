@@ -1,4 +1,4 @@
-import { IUser, AnimalPost, Comment, User } from "../types";
+import { IUser, AnimalPost, Comment, User, PostWithAuthor } from "../types";
 
 function toPublicUser(user: IUser): User {
   return {
@@ -8,26 +8,6 @@ function toPublicUser(user: IUser): User {
     profileImagePath: user.profileImagePath,
   };
 }
-
-export type PopulatedPost = {
-  _id: { toString(): string };
-  name: string;
-  type: "dog" | "cat" | "other";
-  age: number;
-  gender: "male" | "female";
-  description: string;
-  location: string;
-  imagePaths: string[];
-  createdBy: IUser;
-  likes: Array<{ toString(): string } | string>;
-  commentsCount: number;
-  createdAt?: Date;
-  vaccinated: boolean;
-  neutered: boolean;
-  goodWithKids: boolean;
-  goodWithOtherAnimals: boolean;
-  adoptionStatus: "available" | "pending" | "adopted";
-};
 
 export type PopulatedComment = {
   _id: { toString(): string };
@@ -48,7 +28,7 @@ export function buildCommentResponse(comment: PopulatedComment): Comment {
 }
 
 export function buildPostResponse(
-  post: PopulatedPost,
+  post: PostWithAuthor,
   userId?: string,
 ): AnimalPost {
   return {
@@ -67,6 +47,7 @@ export function buildPostResponse(
     imagePaths: post.imagePaths,
     createdBy: toPublicUser(post.createdBy),
     likes: post.likes.map((id) => id.toString()),
+    size: post.size,
     commentsCount: post.commentsCount,
     createdAt: post.createdAt?.toISOString() ?? new Date().toISOString(),
     isLiked: userId ? post.likes.some((id) => id.toString() === userId) : false,

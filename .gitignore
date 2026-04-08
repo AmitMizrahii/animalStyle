@@ -9,6 +9,7 @@ dist/
 *.tsbuildinfo
 
 # Logs & Coverage
+logs/
 *.logs
 npm-debug.log*
 coverage/
