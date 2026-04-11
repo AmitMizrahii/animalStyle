@@ -37,6 +37,10 @@ const LoginPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const googleBtnRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    error;
+    debugger;
+  }, [error]);
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID as
     | string
     | undefined;
@@ -44,6 +48,7 @@ const LoginPage: React.FC = () => {
     !!googleClientId && googleClientId !== "your-google-client-id";
 
   // Initialise Google Identity Services after the GSI script loads
+
   useEffect(() => {
     if (!showGoogleBtn) return;
 
@@ -91,6 +96,7 @@ const LoginPage: React.FC = () => {
       await login(email, password);
       navigate("/");
     } catch (err) {
+      debugger;
       setError(
         err instanceof Error ? err.message : "Login failed. Please try again.",
       );

@@ -53,10 +53,10 @@ apiClient.interceptors.response.use(
             originalRequest.headers.Authorization = `Bearer ${token}`;
           }
           return apiClient(originalRequest);
-        } catch (refreshError) {
+        } catch {
           localStorage.removeItem("authToken");
           localStorage.removeItem("refreshToken");
-          window.location.href = "/login";
+          return Promise.reject(error);
         }
       }
     }

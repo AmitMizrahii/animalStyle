@@ -12,6 +12,7 @@ import { authAPI } from "../utils/api";
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
+  isInitializing: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
   register: (
@@ -29,7 +30,8 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isInitializing, setIsInitializing] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
@@ -45,7 +47,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     }
 
-    setIsLoading(false);
+    setIsInitializing(false);
   }, []);
 
   const login = useCallback(async (email: string, password: string): Promise<void> => {
@@ -123,6 +125,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       value={{
         user,
         isAuthenticated: !!user,
+        isInitializing,
         isLoading,
         login,
         register,
