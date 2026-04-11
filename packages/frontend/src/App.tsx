@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import { useAuth } from "./hooks/useAuth";
 import "./App.css";
+import RegisterPage from "./pages/RegisterPage";
 
 const App: React.FC = () => {
   const { isInitializing } = useAuth();
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           ) : (
             <Routes>
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
             </Routes>
           )}
         </main>
