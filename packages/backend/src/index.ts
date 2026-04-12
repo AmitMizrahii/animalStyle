@@ -71,7 +71,7 @@ const initializeApp = (): Promise<Express> => {
       process.env.MONGODB_CLUSTER +
       "/" +
       process.env.MONGODB_DB_NAME;
-    console.log("MONGODB_URI:", dbUri);
+
     if (!dbUri) {
       logger.error("MONGODB_URI is not defined in environment variables.");
       reject(new Error("MONGODB_URI is not defined"));
