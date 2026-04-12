@@ -4,6 +4,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "strict": true,
+    "outDir": "dist",
+    "rootDir": "src",
     "skipLibCheck": true,
     "noImplicitAny": true,
     "strictNullChecks": true,

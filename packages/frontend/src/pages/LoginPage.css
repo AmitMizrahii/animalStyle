@@ -1,0 +1,337 @@
+/* ── Full-page layout ── */
+.login-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(150deg, #f6ffe8 0%, #fffde8 55%, #f0ffe4 100%);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ── Decorative background elements ── */
+.login-deco {
+  position: absolute;
+  font-size: 11rem;
+  opacity: 0.13;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.login-deco--paw {
+  bottom: -1rem;
+  left: -1.5rem;
+  transform: rotate(-10deg);
+}
+
+.login-deco--heart {
+  top: 3rem;
+  right: -1rem;
+  font-size: 9rem;
+  transform: rotate(10deg);
+}
+
+/* ── Top branding strip ── */
+.login-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(6px);
+  flex-shrink: 0;
+}
+
+.login-brand-icon {
+  font-size: 1.1rem;
+}
+
+.login-brand-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: -0.2px;
+}
+
+/* ── Card ── */
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem 1.75rem;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  overflow-y: scroll;
+}
+
+.login-card-icon {
+  margin-bottom: 0.4rem;
+  line-height: 0;
+  filter: drop-shadow(0 4px 8px rgba(76, 175, 80, 0.3));
+}
+
+.login-powered {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f59e0b;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ── Error ── */
+.error-message {
+  width: 100%;
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  border-left: 3px solid #c62828;
+}
+
+/* ── Form ── */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.form-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.forgot-password-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #f59e0b;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.forgot-password-btn:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  background: #fff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.12);
+}
+
+.form-group input:disabled {
+  background: #f7fafc;
+  cursor: not-allowed;
+}
+
+/* Password wrapper with eye toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 2.75rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+  cursor: pointer;
+  display: flex;
+}
+
+.toggle-password:hover {
+  color: #4a5568;
+}
+
+/* ── Login button ── */
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #4caf50 !important; /* force green — prevents OS accent-colour override */
+  background-image: none !important;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s;
+  margin-top: 0.25rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #43a047 !important;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.35);
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Divider ── */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  color: #a0aec0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 1rem 0 0.75rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* ── Google button ── */
+.google-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+  margin-bottom: -3rem;
+}
+
+.google-btn:hover:not(:disabled) {
+  background: #f7fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Footer ── */
+.login-footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.register-link {
+  color: #f59e0b;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.register-link:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.5rem 1.25rem 1.5rem;
+    border-radius: 16px;
+    margin: 0.75rem;
+  }
+}

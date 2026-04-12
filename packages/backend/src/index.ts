@@ -10,7 +10,7 @@ import { createPostRoutes } from "./routes/postRoutes";
 import { createUserRoutes } from "./routes/userRoutes";
 import logger from "./utils/logger";
 
-dotenv.config({ path: ".env.dev" });
+dotenv.config();
 
 const initializeApp = (): Promise<Express> => {
   return new Promise<Express>((resolve, reject) => {
@@ -61,7 +61,17 @@ const initializeApp = (): Promise<Express> => {
 
     app.use(errorHandler);
 
-    const dbUri = process.env.MONGODB_URI;
+    const dbUri =
+      process.env.MONGODB_PREFIX +
+      "://" +
+      process.env.MONGODB_USERNAME +
+      ":" +
+      process.env.MONGODB_PASSWORD +
+      "@" +
+      process.env.MONGODB_CLUSTER +
+      "/" +
+      process.env.MONGODB_DB_NAME;
+
     if (!dbUri) {
       logger.error("MONGODB_URI is not defined in environment variables.");
       reject(new Error("MONGODB_URI is not defined"));

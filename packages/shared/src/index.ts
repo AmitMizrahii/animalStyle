@@ -1,5 +1,6 @@
 export * from "./post-api";
 export * from "./user-api";
+export * from "./auth-api";
 
 export interface User {
   _id: string;
