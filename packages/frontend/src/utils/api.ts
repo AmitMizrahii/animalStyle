@@ -3,8 +3,13 @@ import axios, {
   AxiosInstance,
   InternalAxiosRequestConfig,
 } from "axios";
-import { AuthResponse, LoginRequest, RegisterRequest } from "../types";
-
+import {
+  AnimalPost,
+  AuthResponse,
+  LoginRequest,
+  RegisterRequest,
+} from "../types";
+import { CreatePostSchema } from "shared";
 interface RetryableConfig extends InternalAxiosRequestConfig {
   _retry?: boolean;
 }
@@ -76,4 +81,32 @@ export const authAPI = {
 
   googleLogin: (credential: string) =>
     apiClient.post<AuthResponse>("/auth/google", { credential }),
+};
+
+export const uploadAPI = {
+  uploadFile: (file: File) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    return apiClient.post<{
+      success: boolean;
+      data: { path: string; filename: string };
+    }>("/upload", formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+  },
+
+  uploadMultiple: (files: File[]) => {
+    const formData = new FormData();
+    files.forEach((f) => formData.append("files", f));
+    return apiClient.post<{ success: boolean; data: { paths: string[] } }>(
+      "/upload/multiple",
+      formData,
+      { headers: { "Content-Type": "multipart/form-data" } },
+    );
+  },
+};
+
+export const postsAPI = {
+  createPost: (data: CreatePostSchema) =>
+    apiClient.post<AnimalPost>("/posts", data),
 };

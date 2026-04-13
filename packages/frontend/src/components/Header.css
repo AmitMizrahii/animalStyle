@@ -1,0 +1,121 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8ecf0;
+  padding: 0.75rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  width: 100%;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.header-logo h1 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: #38a169; /* green brand */
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #f0fdf4;
+  color: #38a169;
+  opacity: 0.9;
+}
+
+.nav-link.active {
+  background-color: #f0fdf4;
+  color: #38a169;
+  font-weight: 600;
+}
+
+.header-user {
+  justify-self: end;
+  position: relative;
+}
+
+.user-menu-toggle {
+  background: #f7f8fc;
+  color: #2d3748;
+  border: 1.5px solid #e2e8f0;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.user-menu-toggle:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.user-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 180px;
+  z-index: 101;
+}
+
+.user-menu-item {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: none;
+  background: none;
+  color: #2d3748;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.92rem;
+  transition: background-color 0.15s;
+}
+
+.user-menu-item:hover {
+  background-color: #f7fafc;
+}
+
+.user-menu-item.logout {
+  color: #e53e3e;
+  border-top: 1px solid #e2e8f0;
+}
+
+.user-menu-item.logout:hover {
+  background-color: #fff5f5;
+}
