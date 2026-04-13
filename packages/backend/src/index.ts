@@ -6,6 +6,7 @@ import { errorHandler } from "./middleware/errorMiddleware";
 import requestLogger from "./middleware/requestLogger";
 import { createAuthRoutes } from "./routes/authRoutes";
 import { createCommentRoutes } from "./routes/commentRoutes";
+import multerRoute from "./routes/multerRoutes";
 import { createPostRoutes } from "./routes/postRoutes";
 import { createUserRoutes } from "./routes/userRoutes";
 import logger from "./utils/logger";
@@ -37,6 +38,9 @@ const initializeApp = (): Promise<Express> => {
 
       return next();
     });
+
+    app.use("/public", express.static("./public"));
+    app.use("/upload", multerRoute);
 
     app.use("/auth", createAuthRoutes(userRepository));
     app.use("/users", createUserRoutes(userRepository));
