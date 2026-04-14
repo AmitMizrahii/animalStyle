@@ -3,14 +3,13 @@ import axios, {
   AxiosInstance,
   InternalAxiosRequestConfig,
 } from "axios";
-import { AuthResponse, LoginRequest, RegisterRequest } from "../types";
-
-interface RetryableConfig extends InternalAxiosRequestConfig {
-  _retry?: boolean;
-}
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
+
+export interface RetryableConfig extends InternalAxiosRequestConfig {
+  _retry?: boolean;
+}
 
 const apiClient: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
@@ -65,15 +64,4 @@ apiClient.interceptors.response.use(
   },
 );
 
-export const authAPI = {
-  register: (data: RegisterRequest) =>
-    apiClient.post<AuthResponse>("/auth/register", data),
-
-  login: (data: LoginRequest) =>
-    apiClient.post<AuthResponse>("/auth/login", data),
-
-  logout: () => apiClient.post("/auth/logout"),
-
-  googleLogin: (credential: string) =>
-    apiClient.post<AuthResponse>("/auth/google", { credential }),
-};
+export default apiClient;

@@ -20,6 +20,8 @@ export const createPostSchema = z.object({
     .default("available"),
 });
 
+export type CreatePostSchema = z.output<typeof createPostSchema>;
+
 export const updatePostSchema = z.object({
   name: z.string().min(1).optional(),
   type: z.enum(["dog", "cat", "other"]).optional(),

@@ -3,10 +3,14 @@
 .yarn/
 .pnp.*
 
+#Uploads Of Images
+uploads/
+
 # Build & TypeScript Output
 dist/
 **/lib
 *.tsbuildinfo
+
 
 # Logs & Coverage
 logs/
