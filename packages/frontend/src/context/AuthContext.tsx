@@ -1,13 +1,13 @@
 import {
   createContext,
+  ReactNode,
+  useCallback,
   useContext,
   useEffect,
   useState,
-  useCallback,
-  ReactNode,
 } from "react";
+import { authAPI } from "../api/authApi";
 import { User } from "../types";
-import { authAPI } from "../utils/api";
 
 interface AuthContextType {
   user: User | null;
@@ -50,30 +50,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setIsInitializing(false);
   }, []);
 
-  const login = useCallback(async (email: string, password: string): Promise<void> => {
-    try {
-      setIsLoading(true);
-      const response = await authAPI.login({ email, password });
-      const { token, refreshToken, ...userData } = response.data.data;
-      localStorage.setItem("authToken", token);
-      localStorage.setItem("refreshToken", refreshToken);
-      localStorage.setItem("userData", JSON.stringify(userData));
-      setUser(userData as User);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  const register = useCallback(
-    async (
-      username: string,
-      email: string,
-      password: string,
-      passwordConfirm: string,
-    ): Promise<void> => {
+  const login = useCallback(
+    async (email: string, password: string): Promise<void> => {
       try {
         setIsLoading(true);
-        const response = await authAPI.register({ username, email, password, passwordConfirm });
+        const response = await authAPI.login({ email, password });
         const { token, refreshToken, ...userData } = response.data.data;
         localStorage.setItem("authToken", token);
         localStorage.setItem("refreshToken", refreshToken);
@@ -86,19 +67,49 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     [],
   );
 
-  const loginWithGoogle = useCallback(async (credential: string): Promise<void> => {
-    try {
-      setIsLoading(true);
-      const response = await authAPI.googleLogin(credential);
-      const { token, refreshToken, ...userData } = response.data.data;
-      localStorage.setItem("authToken", token);
-      localStorage.setItem("refreshToken", refreshToken);
-      localStorage.setItem("userData", JSON.stringify(userData));
-      setUser(userData as User);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+  const register = useCallback(
+    async (
+      username: string,
+      email: string,
+      password: string,
+      passwordConfirm: string,
+    ): Promise<void> => {
+      try {
+        setIsLoading(true);
+        const response = await authAPI.register({
+          username,
+          email,
+          password,
+          passwordConfirm,
+        });
+        const { token, refreshToken, ...userData } = response.data.data;
+        localStorage.setItem("authToken", token);
+        localStorage.setItem("refreshToken", refreshToken);
+        localStorage.setItem("userData", JSON.stringify(userData));
+        setUser(userData as User);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [],
+  );
+
+  const loginWithGoogle = useCallback(
+    async (credential: string): Promise<void> => {
+      try {
+        setIsLoading(true);
+        const response = await authAPI.googleLogin(credential);
+        const { token, refreshToken, ...userData } = response.data.data;
+        localStorage.setItem("authToken", token);
+        localStorage.setItem("refreshToken", refreshToken);
+        localStorage.setItem("userData", JSON.stringify(userData));
+        setUser(userData as User);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [],
+  );
 
   const logout = useCallback(async (): Promise<void> => {
     try {

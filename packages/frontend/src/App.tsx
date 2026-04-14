@@ -1,12 +1,12 @@
 import React from "react";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import { useAuth } from "./hooks/useAuth";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import RegisterPage from "./pages/RegisterPage";
-import ProtectedRoute from "./components/ProtectedRoute";
-import CreatePostPage from "./pages/CreatePostPage";
 import Header from "./components/Header";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "./hooks/useAuth";
+import CreatePostPage from "./pages/CreatePostPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const App: React.FC = () => {
   const { isAuthenticated, isInitializing } = useAuth();
@@ -33,8 +33,6 @@ const App: React.FC = () => {
                   </ProtectedRoute>
                 }
               />
-
-              {/* 404 Fallback */}
               <Route
                 path="*"
                 element={

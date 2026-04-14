@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { postsAPI, uploadAPI } from "../utils/api";
 import "./CreatePostPage.css";
 import { CreatePostSchema } from "../types";
+import { uploadAPI } from "../api/uploadsApi";
+import { postsAPI } from "../api/postsApi";
 
 const initialFormData: CreatePostSchema = {
   name: "",
