@@ -5,7 +5,6 @@ import { AnimalPost } from "../types";
 import "./PostDetailPage.css";
 import { postsAPI } from "../api/postsApi";
 import { uploadAPI } from "../api/uploadsApi";
-import { Tooltip } from "@mui/material";
 
 const PostDetailPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -17,8 +16,22 @@ const PostDetailPage: React.FC = () => {
   const [postError, setPostError] = useState<string | null>(null);
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
 
+  // Edit modal
   const [isEditing, setIsEditing] = useState(false);
-  const [editData, setEditData] = useState<Partial<AnimalPost>>({
+  const [editData, setEditData] = useState<{
+    name: string;
+    type: "dog" | "cat" | "other";
+    age: number;
+    gender: "male" | "female";
+    description: string;
+    location: string;
+    size: "small" | "medium" | "large";
+    vaccinated: boolean;
+    neutered: boolean;
+    goodWithKids: boolean;
+    goodWithOtherAnimals: boolean;
+    adoptionStatus: "available" | "pending" | "adopted";
+  }>({
     name: "",
     type: "dog",
     age: 1,
@@ -42,14 +55,17 @@ const PostDetailPage: React.FC = () => {
   const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
 
   const getImageUrl = (path?: string) => {
-    if (!path) return "/public/noImage.svg";
+    if (!path) return "https://placehold.co/800x600?text=No+Image";
     if (path.startsWith("http")) return path;
     if (path.startsWith("/public")) return `${apiBase}${path}`;
     return `${apiBase}/${path}`;
   };
 
   const getImages = (p: AnimalPost): string[] => {
-    return p.imagePaths.map(getImageUrl);
+    if (p.imagePaths?.length) return p.imagePaths.map(getImageUrl);
+    // Fallback for legacy documents that only have imagePath
+    const legacy = (p as unknown as { imagePath?: string }).imagePath;
+    return [getImageUrl(legacy)];
   };
 
   const isOwner =
@@ -88,7 +104,9 @@ const PostDetailPage: React.FC = () => {
             : [...prev.likes, user._id],
         };
       });
-    } catch {}
+    } catch {
+      // silent
+    }
   };
 
   const handleDeletePost = async () => {
@@ -240,7 +258,10 @@ const PostDetailPage: React.FC = () => {
               src={images[selectedImageIdx]}
               alt={post.name}
               className="main-image"
-              onError={(e) => (e.currentTarget.src = "/public/noImage.svg")}
+              onError={(e) =>
+                (e.currentTarget.src =
+                  "https://placehold.co/800x600?text=No+Image")
+              }
             />
           </div>
           <div style={{ display: "flex", gap: "0.5rem" }}>
@@ -254,7 +275,8 @@ const PostDetailPage: React.FC = () => {
                   src={img}
                   alt={`${post.name} ${i + 1}`}
                   onError={(e) =>
-                    (e.currentTarget.src = "/public/questionMark.svg")
+                    (e.currentTarget.src =
+                      "https://placehold.co/100x100?text=?")
                   }
                 />
               </button>
@@ -268,7 +290,7 @@ const PostDetailPage: React.FC = () => {
 
           <button
             className="conversations-btn"
-            onClick={() => navigate(`/post/${post._id}/comments`)} //TODO: comments page
+            onClick={() => navigate(`/post/${post._id}/comments`)}
           >
             <span className="conv-icon">💬</span>
             <div className="conv-text">
@@ -324,11 +346,8 @@ const PostDetailPage: React.FC = () => {
             {" — "}
             <span className="capitalize">{post.gender}</span>
           </p>
-          <Tooltip title="soon..." placement="top">
-            <button className="adopt-btn" disabled>
-              ADOPT ME
-            </button>
-          </Tooltip>
+
+          <button className="adopt-btn">ADOPT ME</button>
 
           <div className="attrs-grid">
             <div className="attr-box">
@@ -439,6 +458,7 @@ const PostDetailPage: React.FC = () => {
         </div>
       </div>
 
+      {/* ── Edit Modal ── */}
       {isEditing && (
         <div className="modal-overlay" onClick={() => setIsEditing(false)}>
           <div className="modal-card" onClick={(e) => e.stopPropagation()}>
@@ -452,7 +472,8 @@ const PostDetailPage: React.FC = () => {
                       src={getImageUrl(path)}
                       alt={`Image ${i + 1}`}
                       onError={(e) =>
-                        (e.currentTarget.src = "/public/questionMark.svg")
+                        (e.currentTarget.src =
+                          "https://placehold.co/100x100?text=?")
                       }
                     />
                     <button

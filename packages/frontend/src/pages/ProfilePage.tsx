@@ -72,7 +72,7 @@ const ProfilePage: React.FC = () => {
 
   const openEditModal = () => {
     setEditUsername(profileUser?.username ?? "");
-    setEditImagePreview(getImageUrl(profileUser?.profileImagePath) ?? "");
+    setEditImagePreview("");
     setEditImageFile(null);
     setEditError(null);
     setIsEditing(true);
@@ -130,7 +130,17 @@ const ProfilePage: React.FC = () => {
 
   if (loadingProfile) {
     return (
-      <div className="profile-loading">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "50vh",
+          gap: "1rem",
+          color: "#718096",
+        }}
+      >
         <div className="spinner-ring" />
         <p>Loading profile…</p>
       </div>
@@ -139,9 +149,29 @@ const ProfilePage: React.FC = () => {
 
   if (profileError || !profileUser) {
     return (
-      <div className="profile-error">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "50vh",
+          gap: "1rem",
+          color: "#718096",
+        }}
+      >
         <p>⚠️ {profileError ?? "User not found."}</p>
-        <button onClick={() => navigate(-1)}>Go back</button>
+        <button
+          style={{
+            padding: "0.5rem 1.2rem",
+            background: "#4caf50",
+            color: "#fff",
+            borderRadius: "6px",
+          }}
+          onClick={() => navigate(-1)}
+        >
+          Go back
+        </button>
       </div>
     );
   }
@@ -150,9 +180,8 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div className="profile-page">
-      {/* ── Profile Header ── */}
       <div className="profile-header">
-        <div className="profile-avatar-wrapper">
+        <div style={{ width: 100, height: 100, marginBottom: "0.5rem" }}>
           {avatarUrl ? (
             <img
               src={avatarUrl}
@@ -174,8 +203,19 @@ const ProfilePage: React.FC = () => {
           </div>
         </div>
 
-        <h1 className="profile-username">{profileUser.username}</h1>
-        <p className="profile-email">📍 {profileUser.email}</p>
+        <h1
+          style={{
+            fontSize: "1.75rem",
+            fontWeight: 700,
+            color: "#1a202c",
+            margin: 0,
+          }}
+        >
+          {profileUser.username}
+        </h1>
+        <p style={{ color: "#718096", fontSize: "0.875rem", margin: 0 }}>
+          📍 {profileUser.email}
+        </p>
 
         {isOwnProfile && (
           <button className="edit-profile-btn" onClick={openEditModal}>
@@ -183,11 +223,26 @@ const ProfilePage: React.FC = () => {
           </button>
         )}
 
-        <div className="profile-stats-row">
-          <div className="profile-stat-badge">
-            <span className="stat-icon">📋</span>
-            <span className="stat-count">{posts.length}</span>
-            <span className="stat-label">
+        <div style={{ marginTop: "0.5rem" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              background: "#fff",
+              border: "1px solid #e2e8f0",
+              borderRadius: "50px",
+              padding: "0.35rem 1rem",
+              fontSize: "0.875rem",
+              color: "#2d3748",
+              boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+            }}
+          >
+            <span style={{ fontSize: "1rem" }}>📋</span>
+            <span style={{ fontWeight: 700, color: "#38a169" }}>
+              {posts.length}
+            </span>
+            <span style={{ color: "#718096" }}>
               {isOwnProfile
                 ? "My Listings"
                 : `${profileUser.username}'s Listings`}
@@ -197,7 +252,13 @@ const ProfilePage: React.FC = () => {
       </div>
 
       {/* ── Tabs ── */}
-      <div className="profile-tabs">
+      <div
+        style={{
+          display: "flex",
+          borderBottom: "2px solid #e2e8f0",
+          marginBottom: "1.5rem",
+        }}
+      >
         <button
           className={`profile-tab${activeTab === "posts" ? " active" : ""}`}
           onClick={() => setActiveTab("posts")}
@@ -246,8 +307,7 @@ const ProfilePage: React.FC = () => {
           <div className="profile-posts-grid">
             {likedPosts.map((post) => {
               const imgUrl =
-                getImageUrl(post.imagePaths[0]) ??
-                "https://placehold.co/300x200?text=No+Image";
+                getImageUrl(post.imagePaths[0]) ?? "/public/noImage.png";
               return (
                 <div key={post._id} className="profile-post-card">
                   <div
@@ -259,8 +319,7 @@ const ProfilePage: React.FC = () => {
                       alt={post.name}
                       className="profile-post-image"
                       onError={(e) =>
-                        (e.currentTarget.src =
-                          "https://placehold.co/300x200?text=No+Image")
+                        (e.currentTarget.src = "/public/noImage.png")
                       }
                     />
                     <span className="post-species-badge">
@@ -311,8 +370,7 @@ const ProfilePage: React.FC = () => {
         <div className="profile-posts-grid">
           {posts.map((post) => {
             const imgUrl =
-              getImageUrl(post.imagePaths[0]) ??
-              "https://placehold.co/300x200?text=No+Image";
+              getImageUrl(post.imagePaths[0]) ?? "/public/noImage.png";
             return (
               <div key={post._id} className="profile-post-card">
                 <div
@@ -346,7 +404,7 @@ const ProfilePage: React.FC = () => {
                     <span>💬 {post.commentsCount}</span>
                   </div>
                   {isOwnProfile && (
-                    <div className="profile-post-actions">
+                    <div>
                       <button
                         className="delete-post-btn"
                         onClick={() => handleDeletePost(post._id)}
@@ -365,23 +423,94 @@ const ProfilePage: React.FC = () => {
               className="profile-add-card"
               onClick={() => navigate("/create")}
             >
-              <span className="add-card-icon">+</span>
-              <span className="add-card-label">List an Animal</span>
+              <span
+                style={{ fontSize: "2rem", fontWeight: 300, lineHeight: 1 }}
+              >
+                +
+              </span>
+              <span style={{ fontSize: "0.875rem", fontWeight: 600 }}>
+                List an Animal
+              </span>
             </div>
           )}
         </div>
       )}
 
-      {/* ── Edit Profile Modal ── */}
       {isEditing && (
-        <div className="modal-overlay" onClick={() => setIsEditing(false)}>
-          <div className="modal-card" onClick={(e) => e.stopPropagation()}>
-            <h2>Edit Profile</h2>
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.45)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+            padding: "1rem",
+          }}
+          onClick={() => setIsEditing(false)}
+        >
+          <div
+            style={{
+              background: "#fff",
+              borderRadius: "16px",
+              padding: "2rem",
+              width: "100%",
+              maxWidth: "420px",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2
+              style={{
+                margin: "0 0 1.5rem",
+                fontSize: "1.3rem",
+                color: "#2d3748",
+              }}
+            >
+              Edit Profile
+            </h2>
 
-            <div className="modal-avatar-row">
-              <div className="modal-avatar-preview">
-                {editImagePreview ? (
-                  <img src={editImagePreview} alt="Preview" />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1rem",
+                marginBottom: "1.25rem",
+              }}
+            >
+              <div
+                style={{
+                  width: 70,
+                  height: 70,
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  background: "linear-gradient(135deg, #4caf50, #81c784)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#fff",
+                  fontSize: "1.6rem",
+                  fontWeight: 700,
+                  flexShrink: 0,
+                }}
+              >
+                {editImagePreview || profileUser.profileImagePath ? (
+                  <img
+                    src={
+                      editImagePreview !== ""
+                        ? editImagePreview
+                        : (getImageUrl(profileUser.profileImagePath) ??
+                          "/public/noImage.png")
+                    }
+                    alt="Preview"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    onError={() => setEditImagePreview("")}
+                  />
                 ) : (
                   <span>{editUsername.charAt(0).toUpperCase() || "?"}</span>
                 )}
@@ -409,9 +538,19 @@ const ProfilePage: React.FC = () => {
               />
             </div>
 
-            {editError && <p className="modal-error">{editError}</p>}
+            {editError && (
+              <p
+                style={{
+                  color: "#c53030",
+                  fontSize: "0.85rem",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                {editError}
+              </p>
+            )}
 
-            <div className="modal-actions">
+            <div style={{ display: "flex", gap: "0.75rem" }}>
               <button
                 className="modal-save-btn"
                 onClick={handleEditSave}
