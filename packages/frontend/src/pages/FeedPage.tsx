@@ -31,7 +31,6 @@ const FeedPage: React.FC = () => {
     fetchPosts(1, 10);
   }, []);
 
-  // Infinite scroll via IntersectionObserver — works with any scroll container
   useEffect(() => {
     const sentinel = sentinelRef.current;
     if (!sentinel) return;
@@ -50,7 +49,7 @@ const FeedPage: React.FC = () => {
   }, [hasMore, isLoading]);
 
   const getImageUrl = (imagePath: string) => {
-    if (!imagePath) return "https://placehold.co/300x200?text=No+Image";
+    if (!imagePath) return "/public/noIamage.svg";
     if (imagePath.startsWith("http")) return imagePath;
     if (imagePath.startsWith("/public")) return `${apiBase}${imagePath}`;
     return `${apiBase}/${imagePath}`;
@@ -92,8 +91,7 @@ const FeedPage: React.FC = () => {
                     alt={post.name}
                     className="post-image"
                     onError={(e) =>
-                      (e.currentTarget.src =
-                        "https://placehold.co/300x200?text=No+Image")
+                      (e.currentTarget.src = "/public/noImage.svg")
                     }
                   />
                   <span className="post-type-badge">{post.type}</span>
