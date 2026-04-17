@@ -4,11 +4,12 @@ import "./App.css";
 import Header from "./components/Header";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
+import CommentsPage from "./pages/CommentsPage";
 import CreatePostPage from "./pages/CreatePostPage";
 import FeedPage from "./pages/FeedPage";
 import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
 import PostDetailPage from "./pages/PostDetailPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const App: React.FC = () => {
   const { isAuthenticated, isInitializing } = useAuth();
@@ -40,6 +41,14 @@ const App: React.FC = () => {
                 element={
                   <ProtectedRoute>
                     <PostDetailPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/post/:postId/comments"
+                element={
+                  <ProtectedRoute>
+                    <CommentsPage />
                   </ProtectedRoute>
                 }
               />
