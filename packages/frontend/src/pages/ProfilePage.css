@@ -1,0 +1,319 @@
+/* ── Loading / Error ── */
+.profile-loading,
+.profile-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+  color: #718096;
+}
+.profile-error button {
+  padding: 0.5rem 1.2rem;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 6px;
+}
+
+/* ── Avatar ── */
+.profile-avatar,
+.profile-avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ── Shared green pill buttons ── */
+.edit-profile-btn,
+.add-post-btn {
+  background: #4caf50;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.edit-profile-btn {
+  margin-top: 0.25rem;
+  padding: 0.5rem 1.4rem;
+}
+.add-post-btn {
+  margin-top: 0.75rem;
+  padding: 0.45rem 1.1rem;
+}
+.edit-profile-btn:hover,
+.add-post-btn:hover {
+  background: #43a047;
+}
+
+/* ── Tabs ── */
+.profile-tab {
+  padding: 0.6rem 1.25rem;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #718096;
+}
+.profile-tab:hover {
+  color: #38a169;
+}
+.profile-tab.active {
+  color: #38a169;
+  border-bottom-color: #38a169;
+  font-weight: 600;
+}
+
+/* ── Posts Grid ── */
+.profile-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.profile-loading-posts {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.profile-empty-posts {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #718096;
+}
+.profile-empty-posts .empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Post Card ── */
+.profile-post-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8ecf0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.profile-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.profile-post-image-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.profile-post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.profile-post-image-wrapper:hover .profile-post-image {
+  transform: scale(1.04);
+}
+
+.post-species-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #2d3748;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 50px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.profile-post-info {
+  padding: 0.65rem 0.75rem 0.75rem;
+}
+.post-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.profile-post-name {
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-available-badge {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #38a169;
+  background: #f0fdf4;
+  border: 1px solid #c6f6d5;
+  border-radius: 50px;
+  padding: 0.15rem 0.5rem;
+}
+
+.profile-post-meta {
+  font-size: 0.78rem;
+  color: #718096;
+  margin: 0 0 0.5rem;
+  text-transform: capitalize;
+}
+.post-stats-row {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: #718096;
+  margin-bottom: 0.4rem;
+}
+
+.delete-post-btn {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.3rem 0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #fce4e4;
+  color: #c62828;
+}
+.delete-post-btn:hover {
+  background: #ffcdd2;
+}
+
+/* ── Add Listing Card ── */
+.profile-add-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px dashed #cbd5e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 240px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
+  color: #718096;
+}
+.profile-add-card:hover {
+  border-color: #38a169;
+  background: #f0fdf4;
+  color: #38a169;
+}
+
+/* ── Modal ── */
+.upload-avatar-label {
+  padding: 0.45rem 1rem;
+  background: #f0f4f8;
+  color: #4a5568;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.upload-avatar-label:hover {
+  background: #e2e8f0;
+}
+.upload-avatar-label input {
+  display: none;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.modal-field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+.modal-field input {
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.modal-field input:focus {
+  border-color: #4caf50;
+}
+
+.modal-save-btn,
+.modal-cancel-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.modal-save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+.modal-save-btn:hover:not(:disabled) {
+  background: #43a047;
+}
+.modal-save-btn:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+.modal-cancel-btn {
+  background: #f0f4f8;
+  color: #4a5568;
+}
+.modal-cancel-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+/* ── Spinner ── */
+.spinner-ring {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4caf50;
+  border-radius: 50%;
+  animation: spin-ring 0.8s linear infinite;
+}
+@keyframes spin-ring {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .profile-posts-grid {
+    grid-template-columns: 1fr;
+  }
+}

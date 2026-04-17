@@ -10,6 +10,7 @@ import FeedPage from "./pages/FeedPage";
 import LoginPage from "./pages/LoginPage";
 import PostDetailPage from "./pages/PostDetailPage";
 import RegisterPage from "./pages/RegisterPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const App: React.FC = () => {
   const { isAuthenticated, isInitializing } = useAuth();
@@ -33,6 +34,14 @@ const App: React.FC = () => {
                 element={
                   <ProtectedRoute>
                     <FeedPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/profile/:userId"
+                element={
+                  <ProtectedRoute>
+                    <ProfilePage />
                   </ProtectedRoute>
                 }
               />
