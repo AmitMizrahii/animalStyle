@@ -13,9 +13,9 @@ const CommentsPage: React.FC = () => {
 
   const [post, setPost] = useState<AnimalPost | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
-  const [loadingComments, setLoadingComments] = useState(true);
+  const [isLoadingComments, setIsLoadingComments] = useState(true);
   const [newComment, setNewComment] = useState("");
-  const [addingComment, setAddingComment] = useState(false);
+  const [isAddingComment, setIsAddingComment] = useState(false);
 
   useEffect(() => {
     if (!postId) return;
@@ -30,9 +30,9 @@ const CommentsPage: React.FC = () => {
       })
       .catch(() => {});
 
-    setLoadingComments(true);
+    setIsLoadingComments(true);
     commentsAPI
-      .getPostComments(postId)
+      .getCommentsByPostId(postId)
       .then((res) => {
         const payload = res.data as unknown as {
           success: boolean;
@@ -42,14 +42,14 @@ const CommentsPage: React.FC = () => {
         setComments(Array.isArray(list) ? list : []);
       })
       .catch(() => setComments([]))
-      .finally(() => setLoadingComments(false));
+      .finally(() => setIsLoadingComments(false));
   }, [postId]);
 
   const handleAddComment = async (e: React.FormEvent) => {
     e.preventDefault();
     const content = newComment.trim();
     if (!content || !postId) return;
-    setAddingComment(true);
+    setIsAddingComment(true);
     try {
       const res = await commentsAPI.addComment(postId, content);
       const created =
@@ -63,20 +63,23 @@ const CommentsPage: React.FC = () => {
     } catch {
       alert("Failed to add comment.");
     } finally {
-      setAddingComment(false);
+      setIsAddingComment(false);
     }
   };
 
+  const deleteCommentFromState = (commentId: string) => {
+    setComments((prev) => prev.filter((c) => c._id !== commentId));
+    setPost((prev) =>
+      prev
+        ? { ...prev, commentsCount: Math.max(0, prev.commentsCount - 1) }
+        : prev,
+    );
+  };
   const handleDeleteComment = async (commentId: string) => {
     if (!confirm("Delete this comment?")) return;
     try {
       await commentsAPI.deleteComment(commentId);
-      setComments((prev) => prev.filter((c) => c._id !== commentId));
-      setPost((prev) =>
-        prev
-          ? { ...prev, commentsCount: Math.max(0, prev.commentsCount - 1) }
-          : prev,
-      );
+      deleteCommentFromState(commentId);
     } catch {
       alert("Failed to delete comment.");
     }
@@ -105,7 +108,6 @@ const CommentsPage: React.FC = () => {
           </span>
         </h2>
 
-        {/* Add comment form */}
         <form className="add-comment-form" onSubmit={handleAddComment}>
           <div
             style={{ display: "flex", alignItems: "center", gap: "0.65rem" }}
@@ -118,7 +120,7 @@ const CommentsPage: React.FC = () => {
               placeholder="Write a comment…"
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
-              disabled={addingComment}
+              disabled={isAddingComment}
               maxLength={500}
               className="comment-input"
             />
@@ -126,14 +128,13 @@ const CommentsPage: React.FC = () => {
           <button
             type="submit"
             className="comment-submit-btn"
-            disabled={addingComment || !newComment.trim()}
+            disabled={isAddingComment || !newComment.trim()}
           >
-            {addingComment ? "Posting…" : "Post"}
+            {isAddingComment ? "Posting…" : "Post"}
           </button>
         </form>
 
-        {/* Comment list */}
-        {loadingComments ? (
+        {isLoadingComments ? (
           <div
             style={{
               display: "flex",

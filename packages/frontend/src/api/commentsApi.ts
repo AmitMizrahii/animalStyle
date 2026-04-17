@@ -2,7 +2,7 @@ import { Comment, PaginatedResponse } from "shared";
 import apiClient from "./apiClient";
 
 export const commentsAPI = {
-  getPostComments: (postId: string, page: number = 1, limit: number = 20) =>
+  getCommentsByPostId: (postId: string, page: number = 1, limit: number = 20) =>
     apiClient.get<PaginatedResponse<Comment>>(
       `/comments/${postId}?page=${page}&limit=${limit}`,
     ),
