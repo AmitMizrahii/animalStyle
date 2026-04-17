@@ -9,5 +9,10 @@ export const postsAPI = {
     apiClient.get<PaginatedResponse<AnimalPost>>(
       `/posts?page=${page}&limit=${limit}`,
     ),
+  getPostById: (postId: string) =>
+    apiClient.get<AnimalPost>(`/posts/${postId}`),
   likePost: (postId: string) => apiClient.post(`/posts/${postId}/like`),
+  deletePost: (postId: string) => apiClient.delete(`/posts/${postId}`),
+  updatePost: (postId: string, data: Partial<AnimalPost>) =>
+    apiClient.put<AnimalPost>(`/posts/${postId}`, data),
 };

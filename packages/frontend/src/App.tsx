@@ -8,6 +8,7 @@ import CreatePostPage from "./pages/CreatePostPage";
 import FeedPage from "./pages/FeedPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import PostDetailPage from "./pages/PostDetailPage";
 
 const App: React.FC = () => {
   const { isAuthenticated, isInitializing } = useAuth();
@@ -31,6 +32,14 @@ const App: React.FC = () => {
                 element={
                   <ProtectedRoute>
                     <FeedPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/post/:postId"
+                element={
+                  <ProtectedRoute>
+                    <PostDetailPage />
                   </ProtectedRoute>
                 }
               />
