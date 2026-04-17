@@ -1,0 +1,474 @@
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+/* ── Loading / Error ── */
+.detail-loading,
+.detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+  color: #718096;
+}
+
+.detail-error button {
+  padding: 0.5rem 1.2rem;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 6px;
+}
+
+/* ── Back button ── */
+.back-btn {
+  color: #4caf50;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.back-btn:hover {
+  color: #2e7d32;
+}
+
+/* ── Layout ── */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.main-image-wrap {
+  background: #f5ede0;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.main-image,
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-btn {
+  width: 62px;
+  height: 62px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2.5px solid transparent;
+  background: #f0f0f0;
+  padding: 0;
+  flex-shrink: 0;
+}
+.thumb-btn.active {
+  border-color: #2d3748;
+}
+
+/* ── Animal name / Like ── */
+.animal-name {
+  font-size: 2rem;
+  color: #1a202c;
+  font-weight: 700;
+  margin: 0;
+}
+
+.like-icon-btn,
+.share-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #718096;
+}
+.like-icon-btn:hover,
+.share-icon-btn:hover {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.like-icon-btn.liked {
+  border-color: #e0245e;
+  color: #e0245e;
+  background: #fff5f5;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ── Adopt button ── */
+.adopt-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #1a202c;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.adopt-btn:hover {
+  background: #2d3748;
+  cursor: not-allowed;
+}
+
+/* ── Attributes grid ── */
+.attrs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.attr-box {
+  background: #fff;
+  border: 1.5px solid #e8edf2;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.attr-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.attr-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+/* ── Shelter section ── */
+.shelter-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1.5px solid #e8edf2;
+  border-radius: 12px;
+}
+
+.shelter-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.shelter-info,
+.conv-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.shelter-info {
+  min-width: 0;
+}
+
+.profile-btn {
+  padding: 0.35rem 0.85rem;
+  border: 1.5px solid #2d3748;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.profile-btn:hover {
+  background: #2d3748;
+  color: #fff;
+}
+
+/* ── Section label ── */
+.section-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+}
+
+.location-map-placeholder {
+  background: #f0f4f8;
+  border-radius: 10px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: #a0aec0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.background-text {
+  font-size: 0.875rem;
+  color: #4a5568;
+  line-height: 1.65;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+/* ── Conversations button ── */
+.conversations-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #e8f5e9;
+  border-radius: 12px;
+  text-align: left;
+}
+.conversations-btn:hover {
+  background: #c8e6c9;
+}
+
+.conv-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.conv-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+.conv-count {
+  font-size: 0.72rem;
+  color: #4caf50;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.conv-chevron {
+  font-size: 1.4rem;
+  color: #4caf50;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── Owner actions ── */
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.edit-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.edit-btn:hover {
+  background: #c8e6c9;
+}
+.delete-btn {
+  background: #fce4e4;
+  color: #c62828;
+}
+.delete-btn:hover {
+  background: #ffcdd2;
+}
+
+/* ── Edit Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-card h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+
+.edit-image-preview {
+  margin-bottom: 1.25rem;
+}
+
+.edit-image-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.change-image-label {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: #f0f4f8;
+  color: #4a5568;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.change-image-label:hover {
+  background: #e2e8f0;
+}
+.change-image-label input {
+  display: none;
+}
+
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.edit-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.edit-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.edit-field input,
+.edit-field select,
+.edit-field textarea {
+  resize: none;
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #fff;
+}
+.edit-field input:focus,
+.edit-field select:focus,
+.edit-field textarea:focus {
+  border-color: #4caf50;
+}
+
+.modal-error {
+  color: #c53030;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal-save-btn,
+.modal-cancel-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.modal-save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+.modal-save-btn:hover:not(:disabled) {
+  background: #43a047;
+}
+.modal-save-btn:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+.modal-cancel-btn {
+  background: #f0f4f8;
+  color: #4a5568;
+}
+.modal-cancel-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+/* ── Spinner ── */
+.spinner-ring {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4caf50;
+  border-radius: 50%;
+  animation: spin-ring 0.8s linear infinite;
+}
+@keyframes spin-ring {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .animal-name {
+    font-size: 1.5rem;
+  }
+  .attrs-grid {
+    grid-template-columns: 1fr;
+  }
+}
