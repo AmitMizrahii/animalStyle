@@ -124,6 +124,7 @@
 }
 .adopt-btn:hover {
   background: #2d3748;
+  cursor: not-allowed;
 }
 
 /* ── Attributes grid ── */
