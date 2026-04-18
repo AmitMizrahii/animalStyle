@@ -178,6 +178,140 @@ const ProfilePage: React.FC = () => {
 
   const avatarUrl = getImageUrl(profileUser.profileImagePath);
 
+  const EditProfileModal = () => (
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.45)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 1000,
+        padding: "1rem",
+      }}
+      onClick={() => setIsEditing(false)}
+    >
+      <div
+        style={{
+          background: "#fff",
+          borderRadius: "16px",
+          padding: "2rem",
+          width: "100%",
+          maxWidth: "420px",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h2
+          style={{
+            margin: "0 0 1.5rem",
+            fontSize: "1.3rem",
+            color: "#2d3748",
+          }}
+        >
+          Edit Profile
+        </h2>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+            marginBottom: "1.25rem",
+          }}
+        >
+          <div
+            style={{
+              width: 70,
+              height: 70,
+              borderRadius: "50%",
+              overflow: "hidden",
+              background: "linear-gradient(135deg, #4caf50, #81c784)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontSize: "1.6rem",
+              fontWeight: 700,
+              flexShrink: 0,
+            }}
+          >
+            {editImagePreview || profileUser.profileImagePath ? (
+              <img
+                src={
+                  editImagePreview !== ""
+                    ? editImagePreview
+                    : (getImageUrl(profileUser.profileImagePath) ??
+                      "/public/noImage.png")
+                }
+                alt="Preview"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+                onError={() => setEditImagePreview("")}
+              />
+            ) : (
+              <span>{editUsername.charAt(0).toUpperCase() || "?"}</span>
+            )}
+          </div>
+          <label className="upload-avatar-label">
+            Change Photo
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageFileChange}
+              disabled={editLoading}
+            />
+          </label>
+        </div>
+
+        <div className="modal-field">
+          <label htmlFor="edit-username">Username</label>
+          <input
+            id="edit-username"
+            type="text"
+            value={editUsername}
+            onChange={(e) => setEditUsername(e.target.value)}
+            disabled={editLoading}
+            maxLength={30}
+          />
+        </div>
+
+        {editError && (
+          <p
+            style={{
+              color: "#c53030",
+              fontSize: "0.85rem",
+              marginBottom: "0.75rem",
+            }}
+          >
+            {editError}
+          </p>
+        )}
+
+        <div style={{ display: "flex", gap: "0.75rem" }}>
+          <button
+            className="modal-save-btn"
+            onClick={handleEditSave}
+            disabled={editLoading}
+          >
+            {editLoading ? "Saving…" : "Save Changes"}
+          </button>
+          <button
+            className="modal-cancel-btn"
+            onClick={() => setIsEditing(false)}
+            disabled={editLoading}
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="profile-page">
       <div className="profile-header">
@@ -251,7 +385,6 @@ const ProfilePage: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Tabs ── */}
       <div
         style={{
           display: "flex",
@@ -292,7 +425,6 @@ const ProfilePage: React.FC = () => {
         </button>
       </div>
 
-      {/* ── Content ── */}
       {activeTab === "liked" ? (
         loadingLiked ? (
           <div className="profile-loading-posts">
@@ -382,8 +514,7 @@ const ProfilePage: React.FC = () => {
                     alt={post.name}
                     className="profile-post-image"
                     onError={(e) =>
-                      (e.currentTarget.src =
-                        "https://placehold.co/300x200?text=No+Image")
+                      (e.currentTarget.src = "/public/noImage.png")
                     }
                   />
                   <span className="post-species-badge">
@@ -436,139 +567,7 @@ const ProfilePage: React.FC = () => {
         </div>
       )}
 
-      {isEditing && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.45)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 1000,
-            padding: "1rem",
-          }}
-          onClick={() => setIsEditing(false)}
-        >
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "16px",
-              padding: "2rem",
-              width: "100%",
-              maxWidth: "420px",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2
-              style={{
-                margin: "0 0 1.5rem",
-                fontSize: "1.3rem",
-                color: "#2d3748",
-              }}
-            >
-              Edit Profile
-            </h2>
-
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "1rem",
-                marginBottom: "1.25rem",
-              }}
-            >
-              <div
-                style={{
-                  width: 70,
-                  height: 70,
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  background: "linear-gradient(135deg, #4caf50, #81c784)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#fff",
-                  fontSize: "1.6rem",
-                  fontWeight: 700,
-                  flexShrink: 0,
-                }}
-              >
-                {editImagePreview || profileUser.profileImagePath ? (
-                  <img
-                    src={
-                      editImagePreview !== ""
-                        ? editImagePreview
-                        : (getImageUrl(profileUser.profileImagePath) ??
-                          "/public/noImage.png")
-                    }
-                    alt="Preview"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                    onError={() => setEditImagePreview("")}
-                  />
-                ) : (
-                  <span>{editUsername.charAt(0).toUpperCase() || "?"}</span>
-                )}
-              </div>
-              <label className="upload-avatar-label">
-                Change Photo
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleImageFileChange}
-                  disabled={editLoading}
-                />
-              </label>
-            </div>
-
-            <div className="modal-field">
-              <label htmlFor="edit-username">Username</label>
-              <input
-                id="edit-username"
-                type="text"
-                value={editUsername}
-                onChange={(e) => setEditUsername(e.target.value)}
-                disabled={editLoading}
-                maxLength={30}
-              />
-            </div>
-
-            {editError && (
-              <p
-                style={{
-                  color: "#c53030",
-                  fontSize: "0.85rem",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {editError}
-              </p>
-            )}
-
-            <div style={{ display: "flex", gap: "0.75rem" }}>
-              <button
-                className="modal-save-btn"
-                onClick={handleEditSave}
-                disabled={editLoading}
-              >
-                {editLoading ? "Saving…" : "Save Changes"}
-              </button>
-              <button
-                className="modal-cancel-btn"
-                onClick={() => setIsEditing(false)}
-                disabled={editLoading}
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {isEditing && <EditProfileModal />}
     </div>
   );
 };

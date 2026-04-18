@@ -268,7 +268,7 @@ const PostDetailPage: React.FC = () => {
 
           <button
             className="conversations-btn"
-            onClick={() => navigate(`/post/${post._id}/comments`)} //TODO: comments page
+            onClick={() => navigate(`/post/${post._id}/comments`)}
           >
             <span className="conv-icon">💬</span>
             <div className="conv-text">

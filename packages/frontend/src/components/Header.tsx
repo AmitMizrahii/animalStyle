@@ -59,7 +59,7 @@ const Header: React.FC = () => {
               <button
                 className="user-menu-item"
                 onClick={() => {
-                  navigate(`/profile/${user?._id}`); //TODO: profile page
+                  navigate(`/profile/${user?._id}`);
                   setShowMenu(false);
                 }}
               >
