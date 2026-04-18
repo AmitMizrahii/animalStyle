@@ -79,8 +79,46 @@ export const parseWithGemini = async (
     .replace(/^```(?:json)?\s*/i, "")
     .replace(/\s*```$/i, "");
 
-  return JSON.parse(jsonText) as SearchQuery;
+  return toSearchQuery(JSON.parse(jsonText));
 };
+
+const VALID_TYPES = ["dog", "cat", "other"] as const;
+const VALID_GENDERS = ["male", "female"] as const;
+const VALID_SIZES = ["small", "medium", "large"] as const;
+const VALID_STATUSES = ["available", "pending", "adopted"] as const;
+
+function toSearchQuery(raw: Record<string, unknown>): SearchQuery {
+  const q: SearchQuery = {};
+
+  if (VALID_TYPES.includes(raw.type as (typeof VALID_TYPES)[number])) {
+    q.type = raw.type as SearchQuery["type"];
+  }
+  if (VALID_GENDERS.includes(raw.gender as (typeof VALID_GENDERS)[number])) {
+    q.gender = raw.gender as SearchQuery["gender"];
+  }
+  if (VALID_SIZES.includes(raw.size as (typeof VALID_SIZES)[number])) {
+    q.size = raw.size as SearchQuery["size"];
+  }
+  if (
+    VALID_STATUSES.includes(
+      raw.adoptionStatus as (typeof VALID_STATUSES)[number],
+    )
+  ) {
+    q.adoptionStatus = raw.adoptionStatus as SearchQuery["adoptionStatus"];
+  }
+  if (raw.location && typeof raw.location === "string")
+    q.location = raw.location;
+  if (typeof raw.vaccinated === "boolean") q.vaccinated = raw.vaccinated;
+  if (typeof raw.neutered === "boolean") q.neutered = raw.neutered;
+  if (typeof raw.goodWithKids === "boolean") q.goodWithKids = raw.goodWithKids;
+  if (typeof raw.goodWithOtherAnimals === "boolean")
+    q.goodWithOtherAnimals = raw.goodWithOtherAnimals;
+  if (typeof raw.friendly === "boolean") q.friendly = raw.friendly;
+  if (typeof raw.ageMin === "number") q.ageMin = raw.ageMin;
+  if (typeof raw.ageMax === "number") q.ageMax = raw.ageMax;
+
+  return q;
+}
 
 export const mockAIParser = (query: string): SearchQuery => {
   const lowerQuery = query.toLowerCase();
@@ -135,7 +173,6 @@ export const mockAIParser = (query: string): SearchQuery => {
     filters.goodWithOtherAnimals = true;
   }
 
-  // Age range
   if (
     lowerQuery.includes("young") ||
     lowerQuery.includes("puppy") ||
@@ -146,7 +183,6 @@ export const mockAIParser = (query: string): SearchQuery => {
     filters.ageMin = 7;
   }
 
-  // Adoption status
   if (lowerQuery.includes("available")) {
     filters.adoptionStatus = "available";
   } else if (lowerQuery.includes("adopted")) {
@@ -155,12 +191,10 @@ export const mockAIParser = (query: string): SearchQuery => {
     filters.adoptionStatus = "pending";
   }
 
-  // Location — capture up to 3 words after a preposition
   const locationMatch = query.match(
     /\b(?:in|near|from|around|at)\s+([A-Za-z]+(?:\s+[A-Za-z]+){0,2})/i,
   );
   if (locationMatch) {
-    // Strip trailing common words
     filters.location = locationMatch[1]
       .replace(/\b(for|the|a|an|and|or|with)\s*$/i, "")
       .trim();
