@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { searchAPI } from "../api/search-api";
 import { usePosts } from "../hooks/usePosts";
+import { AnimalPost } from "../types";
 import "./FeedPage.css";
 
 const PostCardSkeleton: React.FC = () => (
@@ -24,6 +26,13 @@ const FeedPage: React.FC = () => {
   const { posts, isLoading, error, hasMore, fetchPosts, toggleLike, loadMore } =
     usePosts();
 
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchMode, setIsSearchMode] = useState(false);
+  const [searchResults, setSearchResults] = useState<AnimalPost[]>([]);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchTotal, setSearchTotal] = useState(0);
+
   const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
   const sentinelRef = useRef<HTMLDivElement>(null);
 
@@ -32,6 +41,7 @@ const FeedPage: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    if (isSearchMode) return;
     const sentinel = sentinelRef.current;
     if (!sentinel) return;
 
@@ -45,8 +55,43 @@ const FeedPage: React.FC = () => {
     );
 
     observer.observe(sentinel);
+
     return () => observer.disconnect();
-  }, [hasMore, isLoading]);
+  }, [hasMore, isLoading, isSearchMode]);
+
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = searchQuery.trim();
+    if (!q) return;
+
+    setSearchLoading(true);
+    setSearchError(null);
+
+    try {
+      const res = await searchAPI.search(q, 1, 20);
+      const payload = res.data as unknown as {
+        success: boolean;
+        data: { data: AnimalPost[]; total: number; hasMore: boolean };
+      };
+      const results =
+        payload.data?.data ?? (res.data as unknown as AnimalPost[]);
+      const total = payload.data?.total ?? results.length;
+      setSearchResults(Array.isArray(results) ? results : []);
+      setSearchTotal(total);
+      setIsSearchMode(true);
+    } catch {
+      setSearchError("Search failed. Please try again.");
+    } finally {
+      setSearchLoading(false);
+    }
+  };
+
+  const handleClearSearch = () => {
+    setSearchQuery("");
+    setIsSearchMode(false);
+    setSearchResults([]);
+    setSearchError(null);
+  };
 
   const getImageUrl = (imagePath: string) => {
     if (!imagePath) return "/public/noIamage.svg";
@@ -55,10 +100,10 @@ const FeedPage: React.FC = () => {
     return `${apiBase}/${imagePath}`;
   };
 
-  const displayPosts = posts;
-  const displayError = error ?? null;
-  const showSkeletons = isLoading;
-  const showBottomSpinner = isLoading && posts.length > 0;
+  const displayPosts = isSearchMode ? searchResults : posts;
+  const displayError = searchError || (!isSearchMode ? error : null);
+  const showSkeletons = searchLoading || isLoading;
+  const showBottomSpinner = !isSearchMode && isLoading && posts.length > 0;
 
   return (
     <div className="feed-page">
@@ -67,6 +112,43 @@ const FeedPage: React.FC = () => {
         <p className="feed-subtitle">
           Browse animals looking for their forever home
         </p>
+
+        <form className="search-form" onSubmit={handleSearch}>
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder='Try: "small friendly dog in Tel Aviv" or "young cat for apartment"'
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              disabled={searchLoading}
+              className="search-input"
+            />
+            <button
+              type="submit"
+              className="search-btn"
+              disabled={searchLoading || !searchQuery.trim()}
+            >
+              {searchLoading ? "Searching..." : "Search"}
+            </button>
+          </div>
+          {isSearchMode && (
+            <button
+              type="button"
+              className="clear-search-btn"
+              onClick={handleClearSearch}
+            >
+              ✕ Clear — show all posts
+            </button>
+          )}
+        </form>
+
+        {isSearchMode && !searchLoading && (
+          <p className="search-results-label">
+            🤖 AI found <strong>{searchTotal}</strong> match
+            {searchTotal !== 1 ? "es" : ""} for &ldquo;{searchQuery}&rdquo;
+          </p>
+        )}
       </div>
 
       {displayError && (
