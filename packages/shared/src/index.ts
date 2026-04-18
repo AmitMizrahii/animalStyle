@@ -57,3 +57,17 @@ export interface PaginatedResponse<T> {
   total: number;
   hasMore: boolean;
 }
+
+export interface SearchQuery extends Partial<AnimalPost> {
+  size?: "small" | "medium" | "large";
+  friendly?: boolean;
+  location?: string;
+  gender?: "male" | "female";
+  vaccinated?: boolean;
+  neutered?: boolean;
+  goodWithKids?: boolean;
+  goodWithOtherAnimals?: boolean;
+  adoptionStatus?: "available" | "pending" | "adopted";
+  ageMin?: number;
+  ageMax?: number;
+}
