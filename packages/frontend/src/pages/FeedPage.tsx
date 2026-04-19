@@ -69,14 +69,8 @@ const FeedPage: React.FC = () => {
 
     try {
       const res = await searchAPI.search(q, 1, 20);
-      const payload = res.data as unknown as {
-        success: boolean;
-        data: { data: AnimalPost[]; total: number; hasMore: boolean };
-      };
-      const results =
-        payload.data?.data ?? (res.data as unknown as AnimalPost[]);
-      const total = payload.data?.total ?? results.length;
-      setSearchResults(Array.isArray(results) ? results : []);
+      const total = res?.total ?? res.data.length;
+      setSearchResults(res.data);
       setSearchTotal(total);
       setIsSearchMode(true);
     } catch {

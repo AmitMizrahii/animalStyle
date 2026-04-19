@@ -47,9 +47,7 @@ const ProfilePage: React.FC = () => {
     usersAPI
       .getUserById(userId)
       .then((res) => {
-        const data =
-          (res.data as { success: boolean; data: User }).data ?? res.data;
-        setProfileUser(data as User);
+        setProfileUser(res);
       })
       .catch(() => setProfileError("Could not load user profile."))
       .finally(() => setLoadingProfile(false));

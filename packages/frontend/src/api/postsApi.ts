@@ -1,3 +1,4 @@
+import { z } from "zod";
 import { AnimalPost, CreatePostSchema, PaginatedResponse } from "shared";
 import apiClient from "./apiClient";
 
@@ -12,14 +13,13 @@ export const postsAPI = {
     const res = await apiClient.get<PaginatedResponse<typeof AnimalPost>>(
       `/posts?page=${page}&limit=${limit}`,
     );
-
-    return PaginatedResponse(AnimalPost).parse(res.data);
+    return z.object({ data: PaginatedResponse(AnimalPost) }).parse(res.data).data;
   },
 
   getPostById: async (postId: string): Promise<AnimalPost> => {
     const res = await apiClient.get<AnimalPost>(`/posts/${postId}`);
 
-    return AnimalPost.parse(res.data);
+    return z.object({ data: AnimalPost }).parse(res.data).data;
   },
 
   likePost: (postId: string) => apiClient.post(`/posts/${postId}/like`),
@@ -32,7 +32,7 @@ export const postsAPI = {
   ): Promise<AnimalPost> => {
     const res = await apiClient.put<AnimalPost>(`/posts/${postId}`, data);
 
-    return AnimalPost.parse(res.data);
+    return z.object({ data: AnimalPost }).parse(res.data).data;
   },
 
   getUserPosts: async (
@@ -44,7 +44,7 @@ export const postsAPI = {
       `/posts/user/${userId}?page=${page}&limit=${limit}`,
     );
 
-    return PaginatedResponse(AnimalPost).parse(res.data);
+    return z.object({ data: PaginatedResponse(AnimalPost) }).parse(res.data).data;
   },
 
   getLikedPosts: async (
@@ -56,6 +56,6 @@ export const postsAPI = {
       `/posts/liked/${userId}?page=${page}&limit=${limit}`,
     );
 
-    return PaginatedResponse(AnimalPost).parse(res.data);
+    return z.object({ data: PaginatedResponse(AnimalPost) }).parse(res.data).data;
   },
 };
