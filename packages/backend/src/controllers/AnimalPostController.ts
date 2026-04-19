@@ -43,7 +43,7 @@ export class AnimalPostController {
 
       const { posts, total } = await this.postRepo.findAll({ page, limit });
 
-      const response: PaginatedResponse<AnimalPost> = {
+      const response: PaginatedResponse<typeof AnimalPost> = {
         data: posts.map((post) => buildPostResponse(post, req.userId)),
         page,
         limit,
@@ -154,7 +154,7 @@ export class AnimalPostController {
         limit,
       });
 
-      const response: PaginatedResponse<AnimalPost> = {
+      const response: PaginatedResponse<typeof AnimalPost> = {
         data: posts.map((post) => buildPostResponse(post, req.userId)),
         page,
         limit,
@@ -178,7 +178,7 @@ export class AnimalPostController {
         page,
         limit,
       });
-      const response: PaginatedResponse<AnimalPost> = {
+      const response: PaginatedResponse<typeof AnimalPost> = {
         data: posts.map((post) => buildPostResponse(post, req.userId)),
         page,
         limit,

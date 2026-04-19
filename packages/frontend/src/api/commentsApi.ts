@@ -2,14 +2,24 @@ import { Comment, PaginatedResponse } from "shared";
 import apiClient from "./apiClient";
 
 export const commentsAPI = {
-  getCommentsByPostId: (postId: string, page: number = 1, limit: number = 20) =>
-    apiClient.get<PaginatedResponse<Comment>>(
+  getCommentsByPostId: async (
+    postId: string,
+    page: number = 1,
+    limit: number = 20,
+  ): Promise<PaginatedResponse<typeof Comment>> => {
+    const res = await apiClient.get(
       `/comments/${postId}?page=${page}&limit=${limit}`,
-    ),
+    );
+    return PaginatedResponse(Comment).parse(res.data);
+  },
 
-  addComment: (postId: string, content: string) =>
-    apiClient.post(`/comments/${postId}`, { content }),
+  addComment: async (postId: string, content: string): Promise<Comment> => {
+    const res = await apiClient.post(`/comments/${postId}`, { content });
 
-  deleteComment: (commentId: string) =>
-    apiClient.delete(`/comments/${commentId}`),
+    return Comment.parse(res.data);
+  },
+
+  deleteComment: async (commentId: string) => {
+    await apiClient.delete(`/comments/${commentId}`);
+  },
 };

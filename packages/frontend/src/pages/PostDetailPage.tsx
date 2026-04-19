@@ -1,11 +1,11 @@
+import { Tooltip } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { postsAPI } from "../api/postsApi";
+import { uploadAPI } from "../api/uploadsApi";
 import { useAuth } from "../hooks/useAuth";
 import { AnimalPost } from "../types";
 import "./PostDetailPage.css";
-import { postsAPI } from "../api/postsApi";
-import { uploadAPI } from "../api/uploadsApi";
-import { Tooltip } from "@mui/material";
 
 const PostDetailPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -61,12 +61,8 @@ const PostDetailPage: React.FC = () => {
     postsAPI
       .getPostById(postId)
       .then((res) => {
-        const data =
-          (res.data as unknown as { success: boolean; data: AnimalPost })
-            .data ?? res.data;
-        const p = data as AnimalPost;
-        if (user) p.isLiked = p.likes.includes(user._id);
-        setPost(p);
+        if (user) res.isLiked = res.likes.includes(user._id);
+        setPost(res);
         setSelectedImageIdx(0);
       })
       .catch(() => setPostError("Could not load post."))
@@ -184,17 +180,12 @@ const PostDetailPage: React.FC = () => {
         setEditLoading(false);
         return;
       }
-      const res = await postsAPI.updatePost(post._id, {
+      const updated = await postsAPI.updatePost(post._id, {
         ...editData,
         imagePaths,
       });
-      const updated =
-        (res.data as unknown as { success: boolean; data: AnimalPost }).data ??
-        res.data;
       setPost((prev) =>
-        prev
-          ? { ...prev, ...(updated as AnimalPost), isLiked: prev.isLiked }
-          : prev,
+        prev ? { ...prev, ...updated, isLiked: prev.isLiked } : prev,
       );
       setIsEditing(false);
     } catch {

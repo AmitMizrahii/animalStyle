@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
-import { AnimalPost, PaginatedResponse } from "../types";
+import { useCallback, useState } from "react";
 import { postsAPI } from "../api/postsApi";
+import { AnimalPost } from "../types";
 
 export const usePosts = () => {
   const [posts, setPosts] = useState<AnimalPost[]>([]);
@@ -20,10 +20,7 @@ export const usePosts = () => {
           setPosts([]);
         }
 
-        const response = await postsAPI.getAllPosts(pageNum, limit);
-        const data = (response.data as any)
-          .data as PaginatedResponse<AnimalPost>;
-
+        const data = await postsAPI.getAllPosts(pageNum, limit);
         setPosts((prev) =>
           pageNum === 1 ? data.data : [...prev, ...data.data],
         );
