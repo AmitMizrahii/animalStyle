@@ -8,6 +8,7 @@ import { createAuthRoutes } from "./routes/authRoutes";
 import { createCommentRoutes } from "./routes/commentRoutes";
 import multerRoute from "./routes/multerRoutes";
 import { createPostRoutes } from "./routes/postRoutes";
+import { createSearchRoutes } from "./routes/searchRoutes";
 import { createUserRoutes } from "./routes/userRoutes";
 import logger from "./utils/logger";
 
@@ -50,6 +51,7 @@ const initializeApp = (): Promise<Express> => {
       "/comments",
       createCommentRoutes(commentRepository, postRepository),
     );
+    app.use("/search", createSearchRoutes(postRepository));
 
     app.get("/health", (_req, res) => {
       res.json({ status: "ok", timestamp: new Date().toISOString() });
