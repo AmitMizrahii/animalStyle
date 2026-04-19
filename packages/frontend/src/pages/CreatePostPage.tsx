@@ -333,7 +333,11 @@ const CreatePostPage: React.FC = () => {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="submit-btn" disabled={isLoading}>
+            <button
+              type="submit"
+              className="submit-btn"
+              disabled={isLoading || success}
+            >
               {isLoading ? "Creating Post..." : "Create Post"}
             </button>
             <button
