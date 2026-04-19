@@ -27,7 +27,7 @@ export class SearchController {
           size: filters.size,
           vaccinated: filters.vaccinated,
           neutered: filters.neutered,
-          goodWithKids: filters.goodWithKids ?? filters.friendly,
+          goodWithKids: filters.goodWithKids,
           goodWithOtherAnimals: filters.goodWithOtherAnimals,
           adoptionStatus: filters.adoptionStatus,
           ageMin: filters.ageMin,

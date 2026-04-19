@@ -9,7 +9,6 @@ export const searchRequestSchema = z.object({
 
 export interface SearchQuery extends Partial<AnimalPost> {
   size?: "small" | "medium" | "large";
-  friendly?: boolean;
   location?: string;
   gender?: "male" | "female";
   vaccinated?: boolean;

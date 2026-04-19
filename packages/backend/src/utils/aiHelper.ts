@@ -113,7 +113,6 @@ function toSearchQuery(raw: Record<string, unknown>): SearchQuery {
   if (typeof raw.goodWithKids === "boolean") q.goodWithKids = raw.goodWithKids;
   if (typeof raw.goodWithOtherAnimals === "boolean")
     q.goodWithOtherAnimals = raw.goodWithOtherAnimals;
-  if (typeof raw.friendly === "boolean") q.friendly = raw.friendly;
   if (typeof raw.ageMin === "number") q.ageMin = raw.ageMin;
   if (typeof raw.ageMax === "number") q.ageMax = raw.ageMax;
 
