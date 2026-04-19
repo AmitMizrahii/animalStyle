@@ -8,7 +8,7 @@ export const parseSearchQuery = async (
 
   if (apiKey && apiKey !== "your-gemini-api-key") {
     try {
-      return await parseWithGemini(searchText, apiKey);
+      return parseWithGemini(searchText, apiKey);
     } catch (error) {
       console.error("Gemini AI search failed, falling back to mock:", error);
     }
