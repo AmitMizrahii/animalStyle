@@ -3,6 +3,7 @@ import { z } from "zod";
 export * from "./post-api";
 export * from "./user-api";
 export * from "./auth-api";
+export * from "./search-api";
 
 export const User = z.object({
   _id: z.string(),
