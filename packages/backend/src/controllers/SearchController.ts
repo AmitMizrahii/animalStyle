@@ -36,7 +36,7 @@ export class SearchController {
         { page, limit },
       );
 
-      const response: PaginatedResponse<AnimalPost> = {
+      const response: PaginatedResponse<typeof AnimalPost> = {
         data: posts.map((post) => buildPostResponse(post, req.userId)),
         page,
         limit,
