@@ -8,6 +8,7 @@
     "start": "node dist/server.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
     "prod": "tsc -p tsconfig_prod.json && pm2 restart ecosystem.config.js --env production",
+    "build:frontend": "cd ../frontend && npm run build && cp -r dist/* ../backend/public/frontend/build/",
     "test": "jest --runInBand"
   },
   "keywords": [],
