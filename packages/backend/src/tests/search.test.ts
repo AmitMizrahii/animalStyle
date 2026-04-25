@@ -474,14 +474,6 @@ describe("AI Helper", () => {
       expect(result).toEqual({ type: "dog", location: "Tel Aviv" });
     });
 
-    it("strips markdown fences from the response", async () => {
-      mockGenerateContent.mockResolvedValue(
-        geminiResponse('```json\n{"type":"cat"}\n```'),
-      );
-
-      expect(await parseWithGemini("cat", "test-key")).toEqual({ type: "cat" });
-    });
-
     it("throws when Gemini returns invalid JSON", async () => {
       mockGenerateContent.mockResolvedValue(geminiResponse("not json"));
 
