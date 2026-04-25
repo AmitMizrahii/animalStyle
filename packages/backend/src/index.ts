@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express, { Express } from "express";
 import mongoose from "mongoose";
+import path from "path";
 import { commentRepository, postRepository, userRepository } from "./container";
 import { errorHandler } from "./middleware/errorMiddleware";
 import requestLogger from "./middleware/requestLogger";
@@ -10,8 +11,8 @@ import multerRoute from "./routes/multerRoutes";
 import { createPostRoutes } from "./routes/postRoutes";
 import { createSearchRoutes } from "./routes/searchRoutes";
 import { createUserRoutes } from "./routes/userRoutes";
-import logger from "./utils/logger";
 import { specs, swaggerUi } from "./swagger";
+import logger from "./utils/logger";
 
 dotenv.config();
 
@@ -75,7 +76,10 @@ const initializeApp = (): Promise<Express> => {
       res.json({ status: "ok", timestamp: new Date().toISOString() });
     });
 
-    app.use((_req, res) => {
+    const clientBuildPath = path.join(__dirname, "../public/frontend/dist");
+    app.use(express.static(clientBuildPath));
+
+    app.use("/api", (_req, res) => {
       res.status(404).json({
         success: false,
         message: "Route not found",
@@ -83,6 +87,9 @@ const initializeApp = (): Promise<Express> => {
       });
     });
 
+    app.get("*", (_req, res) => {
+      res.sendFile(path.join(clientBuildPath, "index.html"));
+    });
     app.use(errorHandler);
 
     const dbUri =
