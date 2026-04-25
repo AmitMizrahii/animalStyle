@@ -8,7 +8,9 @@ export const parseSearchQuery = async (
 
   if (apiKey && apiKey !== "your-gemini-api-key") {
     try {
-      return parseWithGemini(searchText, apiKey);
+      const answer = await parseWithGemini(searchText, apiKey);
+
+      return answer;
     } catch (error) {
       console.error("Gemini AI search failed, falling back to mock:", error);
     }
@@ -63,23 +65,24 @@ export const parseWithGemini = async (
   query: string,
   apiKey: string,
 ): Promise<SearchQuery> => {
-  const model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash-preview";
+  const model = process.env.GEMINI_MODEL ?? "gemini-3.1-flash-lite-preview";
   const ai = new GoogleGenAI({ apiKey });
 
   const response = await ai.models.generateContent({
     model,
     contents: `Extract search filters from: "${query}"`,
-    config: { systemInstruction: SYSTEM_PROMPT },
+    config: {
+      systemInstruction: SYSTEM_PROMPT,
+      httpOptions: { timeout: 15000 },
+      responseMimeType: "application/json",
+      thinkingConfig: { thinkingBudget: 0 },
+    },
   });
 
   const text = (response.text ?? "").trim();
-  console.log("Gemini response:", JSON.stringify(response));
+  console.log("Gemini response:", JSON.stringify(text));
 
-  const jsonText = text
-    .replace(/^```(?:json)?\s*/i, "")
-    .replace(/\s*```$/i, "");
-
-  return toSearchQuery(JSON.parse(jsonText));
+  return toSearchQuery(JSON.parse(text));
 };
 
 const VALID_TYPES = ["dog", "cat", "other"] as const;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
-import { User, AnimalPost } from "../types";
-import "./ProfilePage.css";
+import { useNavigate, useParams } from "react-router-dom";
 import { postsAPI } from "../api/postsApi";
 import { uploadAPI } from "../api/uploadsApi";
 import { usersAPI } from "../api/usersApi";
+import { useAuth } from "../hooks/useAuth";
+import { AnimalPost, User } from "../types";
+import "./ProfilePage.css";
 
 const ProfilePage: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();
@@ -47,9 +47,7 @@ const ProfilePage: React.FC = () => {
     usersAPI
       .getUserById(userId)
       .then((res) => {
-        const data =
-          (res.data as { success: boolean; data: User }).data ?? res.data;
-        setProfileUser(data as User);
+        setProfileUser(res);
       })
       .catch(() => setProfileError("Could not load user profile."))
       .finally(() => setLoadingProfile(false));
@@ -58,12 +56,7 @@ const ProfilePage: React.FC = () => {
     postsAPI
       .getUserPosts(userId)
       .then((res) => {
-        const payload = res.data as unknown as {
-          success: boolean;
-          data: { data: AnimalPost[] };
-        };
-        const list =
-          payload.data?.data ?? (res.data as unknown as AnimalPost[]);
+        const list = res.data;
         setPosts(Array.isArray(list) ? list : []);
       })
       .catch(() => setPosts([]))
@@ -407,12 +400,7 @@ const ProfilePage: React.FC = () => {
               postsAPI
                 .getLikedPosts(userId)
                 .then((res) => {
-                  const payload = res.data as unknown as {
-                    success: boolean;
-                    data: { data: AnimalPost[] };
-                  };
-                  const list =
-                    payload.data?.data ?? (res.data as unknown as AnimalPost[]);
+                  const list = res.data;
                   setLikedPosts(Array.isArray(list) ? list : []);
                   setLikedLoaded(true);
                 })

@@ -29,7 +29,7 @@ export class CommentController {
         limit,
       });
 
-      const response: PaginatedResponse<Comment> = {
+      const response: PaginatedResponse<typeof Comment> = {
         data: comments.map(buildCommentResponse),
         page,
         limit,

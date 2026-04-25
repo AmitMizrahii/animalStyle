@@ -23,10 +23,7 @@ const CommentsPage: React.FC = () => {
     postsAPI
       .getPostById(postId)
       .then((res) => {
-        const data =
-          (res.data as unknown as { success: boolean; data: AnimalPost })
-            .data ?? res.data;
-        setPost(data as AnimalPost);
+        setPost(res);
       })
       .catch(() => {});
 
@@ -34,11 +31,7 @@ const CommentsPage: React.FC = () => {
     commentsAPI
       .getCommentsByPostId(postId)
       .then((res) => {
-        const payload = res.data as unknown as {
-          success: boolean;
-          data: { data: Comment[] };
-        };
-        const list = payload.data?.data ?? (res.data as unknown as Comment[]);
+        const list = res.data;
         setComments(Array.isArray(list) ? list : []);
       })
       .catch(() => setComments([]))
@@ -51,10 +44,7 @@ const CommentsPage: React.FC = () => {
     if (!content || !postId) return;
     setIsAddingComment(true);
     try {
-      const res = await commentsAPI.addComment(postId, content);
-      const created =
-        (res.data as unknown as { success: boolean; data: Comment }).data ??
-        res.data;
+      const created = await commentsAPI.addComment(postId, content);
       setComments((prev) => [created as Comment, ...prev]);
       setPost((prev) =>
         prev ? { ...prev, commentsCount: prev.commentsCount + 1 } : prev,
