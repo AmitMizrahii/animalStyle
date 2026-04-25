@@ -1,8 +1,9 @@
-import fs from "fs";
-import http from "http";
-import https from "https";
 import initializeApp from "./index";
 import logger from "./utils/logger";
+import https from "https";
+import http from "http";
+import fs from "fs";
+import path from "path";
 
 const PORT = process.env.PORT || 3001;
 const HTTPS_PORT = process.env.HTTPS_PORT || 443;
@@ -14,13 +15,19 @@ initializeApp()
       http.createServer(app).listen(PORT, () => {
         logger.info(`HTTP Server running on http://localhost:${PORT}`);
       });
-
+    } else {
+      const key = fs.readFileSync(
+        path.resolve(process.env.HOME!, "client-key.pem"),
+      );
+      const cert = fs.readFileSync(
+        path.resolve(process.env.HOME!, "client-cert.pem"),
+      );
       const sslOptions = {
-        key: fs.readFileSync("../client-key.pem"),
-        cert: fs.readFileSync("../client-cert.pem"),
+        key,
+        cert,
       };
       https.createServer(sslOptions, app).listen(HTTPS_PORT, () => {
-        logger.info(`Server running on http://localhost:${HTTPS_PORT}`);
+        logger.info(`Server running on https://localhost:${HTTPS_PORT}`);
       });
     }
   })
