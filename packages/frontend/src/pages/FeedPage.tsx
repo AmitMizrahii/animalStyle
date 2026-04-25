@@ -5,6 +5,35 @@ import { usePosts } from "../hooks/usePosts";
 import { AnimalPost } from "../types";
 import "./FeedPage.css";
 
+const SEARCH_MESSAGES = [
+  "Sniffing through the database…",
+  "Consulting the animal experts…",
+  "Matching your perfect companion…",
+  "Almost there, tails are wagging…",
+];
+
+const SearchLoader: React.FC = () => {
+  const [msgIndex, setMsgIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setMsgIndex((i) => (i + 1) % SEARCH_MESSAGES.length),
+      2000,
+    );
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="search-loader">
+      <div className="search-loader-ring">
+        <span className="search-loader-paw">🐾</span>
+      </div>
+      <p className="search-loader-title">AI is searching…</p>
+      <p className="search-loader-msg">{SEARCH_MESSAGES[msgIndex]}</p>
+    </div>
+  );
+};
+
 const PostCardSkeleton: React.FC = () => (
   <div className="post-card skeleton-card">
     <div className="skeleton-image" />
@@ -87,6 +116,22 @@ const FeedPage: React.FC = () => {
     setSearchError(null);
   };
 
+  const handleToggleLike = async (postId: string) => {
+    await toggleLike(postId);
+    if (isSearchMode) {
+      setSearchResults((prev) =>
+        prev.map((post) => {
+          if (post._id !== postId) return post;
+          const isLiked = !post.isLiked;
+          const likesCount = isLiked
+            ? post.likes.length + 1
+            : post.likes.length - 1;
+          return { ...post, isLiked, likes: Array(likesCount).fill("") };
+        }),
+      );
+    }
+  };
+
   const getImageUrl = (imagePath: string) => {
     if (!imagePath) return "/public/noIamage.svg";
     if (imagePath.startsWith("http")) return imagePath;
@@ -96,7 +141,7 @@ const FeedPage: React.FC = () => {
 
   const displayPosts = isSearchMode ? searchResults : posts;
   const displayError = searchError || (!isSearchMode ? error : null);
-  const showSkeletons = searchLoading || isLoading;
+  const showSkeletons = !isSearchMode && isLoading && posts.length === 0;
   const showBottomSpinner = !isSearchMode && isLoading && posts.length > 0;
 
   return (
@@ -151,12 +196,14 @@ const FeedPage: React.FC = () => {
         </div>
       )}
 
+      {searchLoading && <SearchLoader />}
+
       <div className="posts-grid">
         {showSkeletons
           ? Array.from({ length: 6 }).map((_, i) => (
               <PostCardSkeleton key={i} />
             ))
-          : displayPosts.map((post) => (
+          : !searchLoading && displayPosts.map((post) => (
               <div key={post._id} className="post-card">
                 <div
                   className="post-image-wrapper"
@@ -182,7 +229,7 @@ const FeedPage: React.FC = () => {
                   <div className="post-footer">
                     <button
                       className={`like-btn ${post.isLiked ? "liked" : ""}`}
-                      onClick={() => toggleLike(post._id)}
+                      onClick={() => handleToggleLike(post._id)}
                       title={post.isLiked ? "Unlike" : "Like"}
                     >
                       {post.isLiked ? "❤️" : "🤍"} {post.likes.length}
