@@ -73,6 +73,7 @@ export const parseWithGemini = async (
     contents: `Extract search filters from: "${query}"`,
     config: {
       systemInstruction: SYSTEM_PROMPT,
+      httpOptions: { timeout: 15000 },
       responseMimeType: "application/json",
       thinkingConfig: { thinkingBudget: 0 },
     },

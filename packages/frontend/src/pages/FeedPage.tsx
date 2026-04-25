@@ -203,7 +203,8 @@ const FeedPage: React.FC = () => {
           ? Array.from({ length: 6 }).map((_, i) => (
               <PostCardSkeleton key={i} />
             ))
-          : !searchLoading && displayPosts.map((post) => (
+          : !searchLoading &&
+            displayPosts.map((post) => (
               <div key={post._id} className="post-card">
                 <div
                   className="post-image-wrapper"
@@ -256,7 +257,7 @@ const FeedPage: React.FC = () => {
         </div>
       )}
 
-      {!hasMore && posts.length > 0 && !isLoading && (
+      {!hasMore && posts.length > 0 && !isLoading && !isSearchMode && (
         <p className="end-message">You've seen all the animals 🐾</p>
       )}
 
