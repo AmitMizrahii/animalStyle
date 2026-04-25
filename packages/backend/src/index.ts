@@ -76,7 +76,7 @@ const initializeApp = (): Promise<Express> => {
       res.json({ status: "ok", timestamp: new Date().toISOString() });
     });
 
-    const clientBuildPath = path.join(__dirname, "../public/frontend/dist");
+    const clientBuildPath = path.join(__dirname, "../public/frontend/build");
     app.use(express.static(clientBuildPath));
 
     app.use("/api", (_req, res) => {
