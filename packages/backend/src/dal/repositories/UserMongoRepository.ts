@@ -59,7 +59,10 @@ export class UserMongoRepository implements IUserRepository {
     username: string,
     excludeUserId: string,
   ): Promise<boolean> {
-    const doc = await User.findOne({ username, _id: { $ne: excludeUserId } });
+    const query = excludeUserId
+      ? { username, _id: { $ne: excludeUserId } }
+      : { username };
+    const doc = await User.findOne(query);
     return doc !== null;
   }
 

@@ -11,6 +11,7 @@ import { createPostRoutes } from "./routes/postRoutes";
 import { createSearchRoutes } from "./routes/searchRoutes";
 import { createUserRoutes } from "./routes/userRoutes";
 import logger from "./utils/logger";
+import { specs, swaggerUi } from "./swagger";
 
 dotenv.config();
 
@@ -41,6 +42,23 @@ const initializeApp = (): Promise<Express> => {
     });
 
     app.use("/public", express.static("./public"));
+
+    app.use(
+      "/api-docs",
+      swaggerUi.serve,
+      swaggerUi.setup(specs, {
+        explorer: true,
+        customCss: ".swagger-ui .topbar { display: none }",
+        customSiteTitle:
+          "AnimalStyle - Animal Adoption Platform API Documentation",
+      }),
+    );
+
+    app.get("/api-docs.json", (_req, res) => {
+      res.setHeader("Content-Type", "application/json");
+      res.send(specs);
+    });
+
     app.use("/upload", multerRoute);
 
     app.use("/auth", createAuthRoutes(userRepository));
