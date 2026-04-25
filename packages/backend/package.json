@@ -7,6 +7,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "prod": "tsc -p tsconfig_prod.json && pm2 restart ecosystem.config.js --env production",
     "test": "jest --runInBand"
   },
   "keywords": [],
