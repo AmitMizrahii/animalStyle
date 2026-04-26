@@ -171,7 +171,7 @@ const ProfilePage: React.FC = () => {
 
   const avatarUrl = getImageUrl(profileUser.profileImagePath);
 
-  const EditProfileModal = () => (
+  const editProfileModal = (
     <div
       style={{
         position: "fixed",
@@ -555,7 +555,7 @@ const ProfilePage: React.FC = () => {
         </div>
       )}
 
-      {isEditing && <EditProfileModal />}
+      {isEditing && editProfileModal}
     </div>
   );
 };
