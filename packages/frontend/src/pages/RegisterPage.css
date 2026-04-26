@@ -6,8 +6,8 @@
   height: 100%;
   background: linear-gradient(150deg, #f6ffe8 0%, #fffde8 55%, #f0ffe4 100%);
   overflow-x: hidden;
-  overflow-y: hidden; /* scrollable on tiny viewports… */
-  scrollbar-width: none; /* …but no visible scrollbar (Firefox) */
+  overflow-y: hidden;
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -45,6 +45,7 @@
   max-width: 420px;
   margin: auto;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   /* align-items: center; */
   gap: 0;
