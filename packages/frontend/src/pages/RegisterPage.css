@@ -7,6 +7,7 @@
   background: linear-gradient(150deg, #f6ffe8 0%, #fffde8 55%, #f0ffe4 100%);
   overflow-x: hidden;
   overflow-y: hidden;
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
