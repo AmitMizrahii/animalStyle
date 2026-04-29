@@ -2,10 +2,7 @@ import { Router } from "express";
 import { AnimalPostController } from "../controllers/AnimalPostController";
 import { IAnimalPostRepository } from "../dal/interfaces/IAnimalPostRepository";
 import { ICommentRepository } from "../dal/interfaces/ICommentRepository";
-import {
-  authMiddleware,
-  optionalAuthMiddleware,
-} from "../middleware/authMiddleware";
+import { authMiddleware } from "../middleware/authMiddleware";
 
 export function createPostRoutes(
   postRepo: IAnimalPostRepository,
@@ -32,9 +29,7 @@ export function createPostRoutes(
    *         description: List of posts
    */
   router.get("/", (req, res) =>
-    optionalAuthMiddleware(req, res, () =>
-      postController.getAllPosts(req, res),
-    ),
+    authMiddleware(req, res, () => postController.getAllPosts(req, res)),
   );
 
   /**
@@ -132,9 +127,7 @@ export function createPostRoutes(
    *         description: Post details
    */
   router.get("/:postId", (req, res) =>
-    optionalAuthMiddleware(req, res, () =>
-      postController.getPostById(req, res),
-    ),
+    authMiddleware(req, res, () => postController.getPostById(req, res)),
   );
 
   /**
