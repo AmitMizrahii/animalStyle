@@ -7,29 +7,6 @@ export interface AuthRequest extends Request {
   email?: string;
 }
 
-export const optionalAuthMiddleware = (
-  req: AuthRequest,
-  _res: Response,
-  next: NextFunction,
-): void => {
-  try {
-    const authHeader = req.headers.authorization;
-    if (authHeader) {
-      const token = authHeader.startsWith("Bearer ")
-        ? authHeader.slice(7)
-        : authHeader;
-      if (token) {
-        const payload = verifyToken(token);
-        req.userId = payload.userId;
-        req.email = payload.email;
-      }
-    }
-  } catch {
-    // Token is invalid or missing — continue as unauthenticated
-  }
-  next();
-};
-
 export const authMiddleware = (
   req: AuthRequest,
   res: Response,
