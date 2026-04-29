@@ -252,7 +252,9 @@ describe("Animal Post Controller", () => {
     });
 
     it("should get all posts with pagination", async () => {
-      const response = await request(app).get("/posts?page=1&limit=10");
+      const response = await request(app)
+        .get("/posts?page=1&limit=10")
+        .set("Authorization", `Bearer ${authToken}`);
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
@@ -264,7 +266,9 @@ describe("Animal Post Controller", () => {
     });
 
     it("should return correct pagination info", async () => {
-      const response = await request(app).get("/posts?page=1&limit=5");
+      const response = await request(app)
+        .get("/posts?page=1&limit=5")
+        .set("Authorization", `Bearer ${authToken}`);
 
       expect(response.body.data.page).toBe(1);
       expect(response.body.data.limit).toBe(5);
@@ -295,7 +299,9 @@ describe("Animal Post Controller", () => {
     });
 
     it("should get post by ID", async () => {
-      const response = await request(app).get(`/posts/${postId}`);
+      const response = await request(app)
+        .get(`/posts/${postId}`)
+        .set("Authorization", `Bearer ${authToken}`);
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
@@ -303,7 +309,9 @@ describe("Animal Post Controller", () => {
     });
 
     it("should fail with invalid post ID", async () => {
-      const response = await request(app).get(`/posts/invalid-id`);
+      const response = await request(app)
+        .get(`/posts/invalid-id`)
+        .set("Authorization", `Bearer ${authToken}`);
 
       expect(response.status).toBe(500);
       expect(response.body.success).toBe(false);
@@ -423,7 +431,9 @@ describe("Animal Post Controller", () => {
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
 
-      const getResponse = await request(app).get(`/posts/${postId}`);
+      const getResponse = await request(app)
+        .get(`/posts/${postId}`)
+        .set("Authorization", `Bearer ${authToken}`);
       expect(getResponse.status).toBe(404);
     });
   });
@@ -517,7 +527,9 @@ describe("Animal Post Controller", () => {
     });
 
     it("should be 0 on a fresh post", async () => {
-      const response = await request(app).get(`/posts/${postId}`);
+      const response = await request(app)
+        .get(`/posts/${postId}`)
+        .set("Authorization", `Bearer ${authToken}`);
 
       expect(response.status).toBe(200);
       expect(response.body.data.commentsCount).toBe(0);
@@ -534,7 +546,9 @@ describe("Animal Post Controller", () => {
         .set("Authorization", `Bearer ${authToken}`)
         .send({ content: "Second comment" });
 
-      const response = await request(app).get(`/posts/${postId}`);
+      const response = await request(app)
+        .get(`/posts/${postId}`)
+        .set("Authorization", `Bearer ${authToken}`);
       expect(response.body.data.commentsCount).toBe(2);
     });
 
@@ -553,7 +567,9 @@ describe("Animal Post Controller", () => {
         .delete(`/comments/${secondRes.body.data._id}`)
         .set("Authorization", `Bearer ${authToken}`);
 
-      const response = await request(app).get(`/posts/${postId}`);
+      const response = await request(app)
+        .get(`/posts/${postId}`)
+        .set("Authorization", `Bearer ${authToken}`);
       expect(response.body.data.commentsCount).toBe(1);
     });
 
@@ -578,7 +594,9 @@ describe("Animal Post Controller", () => {
         .send({ content: "Comment on first post" })
         .expect(201);
 
-      const response = await request(app).get("/posts?page=1&limit=10");
+      const response = await request(app)
+        .get("/posts?page=1&limit=10")
+        .set("Authorization", `Bearer ${authToken}`);
       const posts: Array<{ _id: string; commentsCount: number }> =
         response.body.data.data;
 
